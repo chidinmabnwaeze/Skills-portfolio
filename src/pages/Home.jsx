@@ -9,6 +9,7 @@ import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
 import References from "../components/References";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -107,6 +108,7 @@ const Home = () => {
         <Services />
         <References />
         <Contact />
+        <Footer />
       </section>
     </main>
   );

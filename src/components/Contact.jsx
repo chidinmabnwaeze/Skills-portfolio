@@ -26,6 +26,9 @@ const Contact = () => {
           <h1>Name</h1>
           <input type="text" className="border rounded-md p-2" />
         </section>
+        <button className="CTA bg-purple-700 p-2.5 w-1/3 text-white rounded-md mt-5">
+          Submit
+        </button>
       </form>
     </main>
   );
