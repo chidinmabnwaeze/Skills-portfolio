@@ -7,7 +7,7 @@ import flask from "../assets/icons/flask.png";
 import mongo from "../assets/icons/mongodb.png";
 import git from "../assets/icons/git.png";
 import python from "../assets/icons/python.png";
-import mysql from "../assets/icons/mysql.png";
+import mysql from "../assets/icons/sql.png";
 
 const Skills = () => {
   const skills = [
@@ -58,7 +58,7 @@ const Skills = () => {
           <span className="text-purple-700">Hover to see proficiency</span>
         </p>
       </div>
-      <main className="skill  w-1/4 grid grid-cols-3 gap-2 m-auto">
+      <main className="skill  w-1/4 grid grid-cols-3 gap-4 m-auto">
         {skills.map((skill, index) => (
           <div
             className=" relative rounded-full w-24 border-2 border-gray-300 p-1"

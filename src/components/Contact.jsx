@@ -5,7 +5,7 @@ const Contact = () => {
     e.preventDefault(e);
   };
   return (
-    <main className="m-32 bg-gray-100 p-3">
+    <main className="m-32 bg-gray-100 p-3 rounded-xl">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Contact</h1>
         <p>Get in touch with me</p>
@@ -25,7 +25,7 @@ const Contact = () => {
         </section>
         <section>
           <h1>Write your message</h1>
-          <textarea type="text" className="border rounded-md p-2 w-full" />
+          <textarea type="text" className="border rounded-md p-8 w-full " />
         </section>
         <div className="flex justify-center">
           <button className="CTA bg-purple-700 p-2.5 w-4/5 text-white rounded-md mt-5">
