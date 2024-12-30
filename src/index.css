@@ -52,7 +52,10 @@
 .indicator {
   color: #7e22ce;
 }
-
+.CTA:hover {
+  opacity: 0.5;
+  transition: all 0.8ms ease-out;
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

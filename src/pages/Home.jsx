@@ -29,9 +29,9 @@ const Home = () => {
             <div className="summary mt-6">
               <p>
                 Data Science <span>&#124;</span>
-                Software Engineering <span>&#124;</span> <br />
-                Backend Engineering <span>&#124;</span>
-                Artificial Intelligence <span>&#124;</span>
+                &nbsp; Software Engineering <span>&#124;</span> <br />
+                &nbsp; Backend Engineering <span>&#124;</span>
+                &nbsp; Artificial Intelligence <span>&#124;</span>
               </p>
             </div>
             <button className="CTA bg-purple-700 p-2.5 text-white rounded-md mt-5">

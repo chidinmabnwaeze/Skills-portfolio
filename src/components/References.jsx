@@ -89,8 +89,8 @@ export default function References() {
             </div>
             <div class="review">
               <span>
-                <img src={startquote} alt="quotes" />
-                {ref.message} &nbsp;
+                <img className="quote" src={startquote} alt="quotes" />
+                {ref.message}
                 <img src={endquote} alt="quotes" />
               </span>
             </div>
