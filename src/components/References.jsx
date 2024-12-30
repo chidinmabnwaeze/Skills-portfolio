@@ -10,19 +10,18 @@ export default function References() {
         <h1 className="text-3xl font-medium">References</h1>
         <p>Here's what my employers and people I've worked with have to say</p>
       </div>
-      <section class="testimonal-cards w-3/4 h-full p-20 m-auto shadow-2xl">
+      <section class="testimonal-cards w-3/4 p-10 m-auto shadow-2xl">
         <div class="testimony flex flex-col justify-center items-center">
-          <div class="client-info flex items-center">
+          <div class="client-info">
             <img
-              class="client-pic w-16 h-16 object-cover rounded-full "
+              class="client-pic w-16 h-16 m-auto object-cover rounded-full "
               src={client}
               alt="client-picture"
             />
-            <span className="m-2">
-              <h3 class="text-blue-700">Sarah Jones</h3>
+            <span className="m-2 text-center">
+              <h3 class="text-purple-700">Sarah Jones</h3>
               <p>M&E Manager</p>
             </span>
-            {/* <span class="ratings"><img src="" alt=""></span>*/}
           </div>
           <div class="review">
             <span>
@@ -30,13 +29,13 @@ export default function References() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eaque
               voluptates saepe maiores sit, labore autem tempore ab! Saepe
               deleniti eveniet consectetur earum dolores officia iste
-              reprehenderit maxime autem cupiditate!
+              reprehenderit maxime autem cupiditate! &nbsp;
               <img src={endquote} alt="quotes" />
             </span>
           </div>
         </div>
-        <div class="scroll-indicator rounded-full">.</div>
       </section>
+      <section className="text-center">&bull; &bull; &bull;</section>
     </section>
   );
 }

@@ -13,7 +13,11 @@
 }
 .project {
   background-image: image("./assets/images/background.png");
+  background: linear-gradient();
   background-repeat: no-repeat;
+}
+.testimonal-cards {
+  height: 390px;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
