@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
-import profile from "../assets/images/image.png";
+import profile from "../assets/images/evan.jpg";
+import profilePic from "../assets/images/image.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
@@ -37,8 +38,8 @@ const Home = () => {
             </button>
           </div>
           <img
-            className="rounded-full w-1/4 ml-12"
-            src={profile}
+            className="rounded-full w-1/4 ml-12 object-center"
+            src={profilePic}
             alt="profile-pic"
           />
         </section>
