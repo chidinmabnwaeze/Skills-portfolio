@@ -18,8 +18,18 @@ const Experience = () => {
       date: "Jul-2024 - September 2024",
     },
   ];
+  const line = [
+    {
+      circle: ".",
+      line: ".",
+    },
+    {
+      circle: ".",
+      line: ".",
+    },
+  ];
   return (
-    <main>
+    <main className="mt-32">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Experience</h1>
         <p>My experience both academically & professionally -- </p>
@@ -34,18 +44,31 @@ const Experience = () => {
           </span>
         </div>
         <div className="exp-body">
-          <div className="flex flex-col justify-center items-center">
-            <div className="rounded-full bg-purple-700 w-6">.</div>
-            <div className="line h-20 w-1 bg-purple-700">.</div>
-          </div>
+          {/* trying to make this line duplicate everytime a new experience is added */}
+          {line.forEach((experience) => {
+            if (exp.length) {
+              line.push(experience);
+            }
+            <div className="flex flex-col justify-center items-center">
+              <div className="rounded-full bg-purple-700 w-6">
+                {experience.circle}
+              </div>
+              <div className="line h-20 w-1 bg-purple-700">
+                {experience.line}
+              </div>
+            </div>;
+          })}
           {exp.map((xp, index) => (
-            <>
-              <div key={index}>
-                <h1>{xp.role}</h1>
+            <div className="m-2" key={index}>
+              <div>
+                <h1 className="font-semibold ">{xp.role}</h1>
                 <p>{xp.org}</p>
               </div>
-              <span>{xp.date}</span>
-            </>
+              <span className="text-gray-500 text-sm">
+                <i class="bx bx-calendar"></i>
+                {xp.date}
+              </span>
+            </div>
           ))}
         </div>
       </section>

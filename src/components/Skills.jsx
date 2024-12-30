@@ -6,7 +6,7 @@ import node from "../assets/icons/node img.png";
 import flask from "../assets/icons/flask.png";
 import mongo from "../assets/icons/mongodb.png";
 import git from "../assets/icons/git.png";
-import python from "../assets/icons/python.jpeg";
+import python from "../assets/icons/python.png";
 import mysql from "../assets/icons/mysql.png";
 
 const Skills = () => {
@@ -50,7 +50,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills h-lvh mt-8">
+    <section className="skills mt-32">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Skills</h1>
         <p>

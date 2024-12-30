@@ -7,6 +7,7 @@ import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
+import References from "../components/References";
 
 const Home = () => {
   return (
@@ -103,6 +104,7 @@ const Home = () => {
         <Experience />
         <Projects />
         <Services />
+        <References />
         <Contact />
       </section>
     </main>
