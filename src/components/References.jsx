@@ -38,27 +38,27 @@ export default function References() {
         <h1 className="text-3xl font-medium">References</h1>
         <p>Here's what my employers and people I've worked with have to say</p>
       </div>
-      {reference.map(() => (
-        <section class="testimonal-cards w-3/4 p-10 m-auto shadow-2xl">
+      {reference.map((ref, index) => (
+        <section
+          class="testimonal-cards w-3/4 p-10 m-auto shadow-2xl"
+          key={index}
+        >
           <div class="testimony flex flex-col justify-center items-center">
             <div class="client-info">
               <img
                 class="client-pic w-16 h-16 m-auto object-cover rounded-full "
-                src={client}
+                src={ref.img}
                 alt="client-picture"
               />
               <span className="m-2 text-center">
-                <h3 class="text-purple-700">Sarah Jones</h3>
-                <p>M&E Manager</p>
+                <h3 class="text-purple-700">{ref.name}</h3>
+                <p>{ref.role}</p>
               </span>
             </div>
             <div class="review">
               <span>
                 <img src={startquote} alt="quotes" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                eaque voluptates saepe maiores sit, labore autem tempore ab!
-                Saepe deleniti eveniet consectetur earum dolores officia iste
-                reprehenderit maxime autem cupiditate! &nbsp;
+                {ref.message} &nbsp;
                 <img src={endquote} alt="quotes" />
               </span>
             </div>
