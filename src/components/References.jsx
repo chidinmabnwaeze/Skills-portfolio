@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import startquote from "../assets/icons/raphael_quote.svg";
 import endquote from "../assets/icons/entypo_quote.svg";
 import client from "../assets/images/aiony-haust-3TLl_97HNJo-unsplash.jpg";
@@ -32,6 +32,8 @@ export default function References() {
       ),
     },
   ];
+  const [slideIndex, setSlideIndex] = useState(0);
+  slideIndex.length;
   return (
     <section class="testimonal-section mt-32 ">
       <div className="title m-12 text-center">
