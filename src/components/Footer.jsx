@@ -22,7 +22,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="copy flex flex-col items-center mt-20">
-        <p>&copy; Copyright Everistus Nwogo @2025</p>
+        <p>&copy; Everistus Nwogo @2025</p>
         <p>All Rights Reserved</p>
       </div>
     </footer>

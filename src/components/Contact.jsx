@@ -5,30 +5,33 @@ const Contact = () => {
     e.preventDefault(e);
   };
   return (
-    <main>
+    <main className="m-32 bg-gray-100 p-3">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Contact</h1>
         <p>Get in touch with me</p>
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className="flex items-center flex-col justify-center bg-gray-200"
-      >
+      <form onSubmit={handleSubmit} className=" w-1/2 p-3 m-auto">
         <section>
           <h1>Name</h1>
-          <input type="text" className="border rounded-md p-2" />
+          <input type="text" className="border rounded-md p-2 w-full" />
         </section>
         <section>
-          <h1>Name</h1>
-          <input type="text" className="border rounded-md p-2" />
+          <h1>Email Address</h1>
+          <input type="text" className="border rounded-md p-2 w-full" />
         </section>
         <section>
-          <h1>Name</h1>
-          <input type="text" className="border rounded-md p-2" />
+          <h1>Phone Number</h1>
+          <input type="text" className="border rounded-md p-2 w-full" />
         </section>
-        <button className="CTA bg-purple-700 p-2.5 w-1/3 text-white rounded-md mt-5">
-          Submit
-        </button>
+        <section>
+          <h1>Write your message</h1>
+          <textarea type="text" className="border rounded-md p-2 w-full" />
+        </section>
+        <div className="flex justify-center">
+          <button className="CTA bg-purple-700 p-2.5 w-4/5 text-white rounded-md mt-5">
+            Submit
+          </button>
+        </div>
       </form>
     </main>
   );
