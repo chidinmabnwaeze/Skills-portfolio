@@ -50,7 +50,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills mt-32 js-scroll hideScroll">
+    <section id="skills" className="skills mt-32 js-scroll hideScroll">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Skills</h1>
         <p>

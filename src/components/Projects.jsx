@@ -6,7 +6,10 @@ import dart from "../assets/icons/dart.png";
 
 const Projects = () => {
   return (
-    <main className="project mt-16 p-4 bg-gradient-to-br rounded-md js-scroll hideScroll">
+    <main
+      id="projects"
+      className="project mt-16 p-4 bg-gradient-to-br rounded-md js-scroll hideScroll"
+    >
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Projects</h1>
         <p>Here are some of my projects </p>

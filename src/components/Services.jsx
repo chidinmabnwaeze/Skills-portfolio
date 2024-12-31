@@ -3,7 +3,10 @@ import { serviceCards } from "../data/service-card";
 
 const Services = () => {
   return (
-    <section className="services mt-28 flex flex-col justify-center items-center js-scroll hideScroll ">
+    <section
+      id="services"
+      className="services mt-28 flex flex-col justify-center items-center js-scroll hideScroll "
+    >
       <div className="services-head text-center mt-6">
         <h1 className="text-3xl font-medium mt-6">Services</h1>
         <p className="">Here's what I offer</p>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
 import profile from "../assets/images/evan.jpg";
@@ -19,32 +19,48 @@ import wavinghand from "../assets/images/waving-hand.png";
 // import { observer } from "../components/scroll";
 
 const Home = () => {
+  const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
-        }
-      });
-    });
-    const scrollElement = document.querySelectorAll(".js-scroll");
-    scrollElement.forEach((event) => observer.observe(event));
+    const sections = document.querySelectorAll(".js-scroll");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            setActiveSection(entry.target.id);
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
 
     return () => {
-      scrollElement.forEach((event) => observer.unobserve(event));
+      sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
 
+  const handleMenuClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="">
-      <Header />
+      <Header handleMenuClick={handleMenuClick} activeSection={activeSection} />
 
       {/* hideScroll class indicates styles for each element before they intersect and are revealed when scrolling */}
 
-      <section className="body content-center m-12 js-scroll hideScroll">
-        <section className="intro h-lvh flex items-center justify-center ">
+      <section className="body content-center m-12">
+        <section
+          id="home"
+          className="home section h-lvh flex items-center justify-center js-scroll hideScroll"
+        >
           <div className="introText relative">
             <span className="flex items-center">
               <h1 className="auto-text text-4xl border-r-4 border-r-purple-700 mr-2 font-semibold">
@@ -99,7 +115,10 @@ const Home = () => {
         </section>
 
         {/* about section */}
-        <section className="about flex flex-col items-center justify-center js-scroll hideScroll">
+        <section
+          id="about"
+          className="about flex flex-col items-center justify-center js-scroll hideScroll"
+        >
           <div className="title m-12">
             <h1 className="text-3xl font-medium">About Me</h1>
             <p>Get to know me!</p>
@@ -112,7 +131,7 @@ const Home = () => {
             />
 
             <div className="info ml-6">
-              <p>
+              <article>
                 I am Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veniam et quia sed accusamus commodi eum, assumenda debitis
                 eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
@@ -130,7 +149,7 @@ const Home = () => {
                 Veniam et quia sed accusamus commodi eum, assumenda debitis
                 eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
                 nihil fuga ab quia?
-              </p>
+              </article>
               <div className="figures flex justify-center items-center mt-20">
                 <div className="mr-10 text-center">
                   <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
@@ -151,11 +170,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* skills section */}
-
         <Skills />
-
-        {/* experience */}
         <Experience />
         <Projects />
         <Services />

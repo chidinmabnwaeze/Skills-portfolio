@@ -5,6 +5,9 @@
 * {
   font-family: poppins;
 }
+html {
+  scroll-behavior: smooth;
+}
 .skill {
   grid-template-columns: repeat(3, minmax(0));
 }
