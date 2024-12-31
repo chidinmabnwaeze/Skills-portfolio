@@ -6,7 +6,7 @@ import twitter from "../assets/logo/twiitter x.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-purple-700 mt-12 p-3 flex flex-col justify-center items-center text-white">
+    <footer className="bg-purple-700 mt-12 p-3 flex flex-col justify-center items-center text-white js-scroll hideScroll">
       <div className="social-links flex">
         <a className="sm-link m-1" href="#">
           <i class="bx bxl-facebook text-2xl"></i>

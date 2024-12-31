@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
 import profile from "../assets/images/evan.jpg";
@@ -16,13 +16,34 @@ import insta from "../assets/logo/instagram-filled.png";
 import linkedin from "../assets/logo/social_linkedin.png";
 import twitter from "../assets/logo/twiitter x.jpeg";
 import wavinghand from "../assets/images/waving-hand.png";
+// import { observer } from "../components/scroll";
 
 const Home = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const scrollElement = document.querySelectorAll(".js-scroll");
+    scrollElement.forEach((event) => observer.observe(event));
+
+    return () => {
+      scrollElement.forEach((event) => observer.unobserve(event));
+    };
+  }, []);
+
   return (
     <main className="">
       <Header />
 
-      <section className="body content-center m-12">
+      {/* hideScroll class indicates styles for each element before they intersect and are revealed when scrolling */}
+
+      <section className="body content-center m-12 js-scroll hideScroll">
         <section className="intro h-lvh flex items-center justify-center ">
           <div className="introText relative">
             <span className="flex items-center">
@@ -78,7 +99,7 @@ const Home = () => {
         </section>
 
         {/* about section */}
-        <section className="about flex flex-col items-center justify-center">
+        <section className="about flex flex-col items-center justify-center js-scroll hideScroll">
           <div className="title m-12">
             <h1 className="text-3xl font-medium">About Me</h1>
             <p>Get to know me!</p>

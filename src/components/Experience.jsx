@@ -29,7 +29,7 @@ const Experience = () => {
     },
   ];
   return (
-    <main className="mt-32">
+    <main className="mt-32 js-scroll hideScroll">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Experience</h1>
         <p>My experience both academically & professionally -- </p>

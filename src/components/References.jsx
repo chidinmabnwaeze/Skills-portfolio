@@ -56,7 +56,7 @@ export default function References() {
     return () => clearInterval(interval);
   }, [reference.length]);
   return (
-    <section class="testimonal-section mt-32 ">
+    <section class="testimonal-section mt-32 js-scroll hideScroll">
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">References</h1>
         <p>Here's what my employers and people I've worked with have to say</p>
