@@ -10,6 +10,12 @@ import Services from "../components/Services";
 import Contact from "../components/Contact";
 import References from "../components/References";
 import Footer from "../components/Footer";
+import Typing from "../components/Typing";
+import facebook from "../assets/logo/facebook-logo-facebook-icon-transparent-free-png.webp";
+import insta from "../assets/logo/instagram-filled.png";
+import linkedin from "../assets/logo/social_linkedin.png";
+import twitter from "../assets/logo/twiitter x.jpeg";
+import wavinghand from "../assets/images/waving-hand.png";
 
 const Home = () => {
   return (
@@ -18,10 +24,17 @@ const Home = () => {
 
       <section className="body content-center m-12">
         <section className="intro h-lvh flex items-center justify-center ">
-          <div className="introText">
-            <h1 className="text-4xl font-semibold">
-              Hello There, I'm Everistus
-            </h1>
+          <div className="introText relative">
+            <span className="flex items-center">
+              <h1 className="auto-text text-4xl border-r-4 border-r-purple-700 mr-2 font-semibold">
+                <Typing
+                  text="Hello There, I'm Everistus"
+                  speed={50}
+                  pauseTime={1000}
+                />
+              </h1>
+              <img src={wavinghand} alt="wave image" />
+            </span>
             <p className="text-xl flex mt-2 ">
               and I am a Data & Software Engineer{" "}
               <img className="emoji h-8" src={man} alt="" />
@@ -30,9 +43,28 @@ const Home = () => {
               <p>
                 Data Science <span>&#124;</span>
                 &nbsp; Software Engineering <span>&#124;</span> <br />
-                &nbsp; Backend Engineering <span>&#124;</span>
+                Backend Engineering <span>&#124;</span>
                 &nbsp; Artificial Intelligence <span>&#124;</span>
               </p>
+            </div>
+            <div className="social-links flex items-center">
+              <a className="sm-link" href="#">
+                {/* <i class="bx bxl-facebook text-2xl"></i> */}
+                <img className="w-10 m-1.5" src={facebook} alt="facebook" />
+              </a>
+              <a className="sm-link" href="#">
+                <img className="w-8 m-1.5" src={insta} alt="insta" />
+              </a>
+              <a className="sm-link" href="#">
+                <img
+                  className="w-8 mx-1.5 mt-1 "
+                  src={linkedin}
+                  alt="linkedin"
+                />
+              </a>
+              <a className="sm-link" href="#">
+                <img className="w-8 m-1.5" src={twitter} alt="twitter" />
+              </a>
             </div>
             <button className="CTA bg-purple-700 p-2.5 text-white rounded-md mt-5">
               Contact Me <span>&rarr;</span>
