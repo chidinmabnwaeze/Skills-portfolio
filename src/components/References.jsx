@@ -65,7 +65,7 @@ export default function References() {
         <p>Here's what my employers and people I've worked with have to say</p>
       </div>
 
-      <section className="testimonal-card w-3/4 m-auto shadow-2xl flex relative justify-center overflow-hidden">
+      <section className="testimonal-card w-3/4 m-auto shadow-2xl flex relative justify-center items-center overflow-hidden">
         {reference.map((ref, index) => (
           <div
             class={`testimony flex flex-col justify-center items-center p-12 ${

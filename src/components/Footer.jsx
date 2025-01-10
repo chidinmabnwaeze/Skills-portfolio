@@ -1,8 +1,4 @@
 import React from "react";
-import facebook from "../assets/logo/facebook-logo-facebook-icon-transparent-free-png.webp";
-import insta from "../assets/logo/instagram-filled.png";
-import linkedin from "../assets/logo/social_linkedin.png";
-import twitter from "../assets/logo/twiitter x.jpeg";
 
 const Footer = () => {
   return (

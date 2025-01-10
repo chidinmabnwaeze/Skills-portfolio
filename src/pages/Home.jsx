@@ -150,7 +150,7 @@ const Home = () => {
                 eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
                 nihil fuga ab quia?
               </article>
-              <div className="figures flex justify-center items-center mt-20">
+              <section className="figures flex justify-center items-center mt-20">
                 <div className="mr-10 text-center">
                   <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
                   <p className="text-gray-500">Years Experience</p>
@@ -165,7 +165,7 @@ const Home = () => {
                   <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
                   <p className="text-gray-500">Companies</p>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </section>
