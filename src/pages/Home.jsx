@@ -56,7 +56,7 @@ const Home = () => {
 
       {/* hideScroll class indicates styles for each element before they intersect and are revealed when scrolling */}
 
-      <section className="body content-center m-12">
+      <section className="body m-12">
         <section
           id="home"
           className="home section h-lvh flex items-center justify-center js-scroll hideScroll"
