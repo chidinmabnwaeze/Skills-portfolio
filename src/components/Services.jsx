@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="services mt-28 flex flex-col justify-center items-center js-scroll hideScroll "
+      className="services mt-28 mx-16 flex flex-col justify-center items-center js-scroll hideScroll "
     >
       <div className="services-head text-center mt-6">
         <h1 className="text-3xl font-medium mt-6">Services</h1>

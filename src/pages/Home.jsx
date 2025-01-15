@@ -56,10 +56,10 @@ const Home = () => {
 
       {/* hideScroll class indicates styles for each element before they intersect and are revealed when scrolling */}
 
-      <section className="body m-12">
+      <section className="body mx-16 my-12">
         <section
           id="home"
-          className="home section h-lvh flex items-center justify-center js-scroll hideScroll"
+          className="home h-lvh flex items-center justify-center js-scroll hideScroll"
         >
           <div className="introText relative">
             <span className="flex items-center">
@@ -117,7 +117,7 @@ const Home = () => {
         {/* about section */}
         <section
           id="about"
-          className="about flex flex-col items-center justify-center js-scroll hideScroll"
+          className="about mx-16 flex flex-col items-center justify-center js-scroll hideScroll"
         >
           <div className="title m-12">
             <h1 className="text-3xl font-medium">About Me</h1>
@@ -125,12 +125,12 @@ const Home = () => {
           </div>
           <div className="aboutInfo flex justify-center">
             <img
-              className="rounded-2xl w-2/4 border-2 border-purple-700"
+              className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
               src={profile}
               alt="my picture"
             />
 
-            <div className="info ml-6">
+            <div className="info ml-10">
               <article>
                 I am Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veniam et quia sed accusamus commodi eum, assumenda debitis
@@ -150,7 +150,7 @@ const Home = () => {
                 eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
                 nihil fuga ab quia?
               </article>
-              <section className="figures flex justify-center items-center mt-20">
+              <section className="figures flex justify-center items-center mt-16">
                 <div className="mr-10 text-center">
                   <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
                   <p className="text-gray-500">Years Experience</p>
