@@ -73,7 +73,7 @@ const Home = () => {
               <img src={wavinghand} alt="wave image" />
             </span>
             <p className="text-xl flex mt-2 ">
-              and I am a Data & Software Engineer{" "}
+              and I am a Data & Software Engineer
               <img className="emoji h-8" src={man} alt="" />
             </p>
             <div className="summary mt-6">
@@ -108,7 +108,7 @@ const Home = () => {
             </button>
           </div>
           <img
-            className="rounded-full w-1/4 ml-12 object-center"
+            className="profilePic rounded-full w-1/4 ml-12 object-center"
             src={profilePic}
             alt="profile-pic"
           />

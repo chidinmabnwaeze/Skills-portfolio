@@ -41,6 +41,9 @@ const Header = ({ handleMenuClick, activeSection }) => {
         </a>
       </div>
       <nav className="navbar flex mr-7">
+        <nav className="menuIcon hidden">
+          <i class="bx bx-menu-alt-right text-2xl text-purple-700"></i>
+        </nav>
         <div className="nav-menu">
           <ul className="nav flex">
             {menu.map((id) => (
