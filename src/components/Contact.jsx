@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <main
       id="contact"
-      className="m-32 bg-gray-100 p-3 rounded-xl js-scroll hideScroll"
+      className="contact m-32 bg-gray-100 p-3 rounded-xl js-scroll hideScroll"
     >
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Contact</h1>
