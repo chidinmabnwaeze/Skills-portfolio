@@ -11,8 +11,23 @@ html {
 .skill {
   grid-template-columns: repeat(3, minmax(0));
 }
-.percent:hover {
-  display: block;
+.skill:hover {
+  /* .stack {
+    background-color: rgb(10, 10, 10);
+    opacity: 0.8;
+  } */
+  .stack-img {
+    opacity: 0.4;
+    transition: 0.6s ease-in-out;
+    /* background-color: black; */
+  }
+  .percent {
+    display: block;
+    transform: translateY(50);
+    transition: 0.8s ease-in-out;
+    opacity: 1;
+    /* color: white; */
+  }
 }
 .project {
   background-image: image("./assets/images/background.png");

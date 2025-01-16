@@ -25,7 +25,7 @@ const Skills = () => {
     },
     {
       img: node,
-      percent: "60%",
+      percent: "70%",
     },
     {
       img: flask,
@@ -33,19 +33,19 @@ const Skills = () => {
     },
     {
       img: python,
-      percent: "60%",
+      percent: "90%",
     },
     {
       img: git,
-      percent: "60%",
+      percent: "90%",
     },
     {
       img: mongo,
-      percent: "60%",
+      percent: "80%",
     },
     {
       img: mysql,
-      percent: "60%",
+      percent: "80%",
     },
   ];
 
@@ -58,18 +58,18 @@ const Skills = () => {
           <span className="text-purple-700">Hover to see proficiency</span>
         </p>
       </div>
-      <main className="skill  w-1/4 grid grid-cols-3 gap-4 m-auto">
+      <main className="skill w-1/4 grid grid-cols-3 gap-4 m-auto">
         {skills.map((skill, index) => (
           <div
-            className=" relative rounded-full w-24 border-2 border-gray-300 p-1"
+            className="stack relative rounded-full w-24 border-2 border-gray-300 p-1"
             key={index}
           >
             <img
-              className="relative object-cover overflow-hidden rounded-full w-full"
+              className="stack-img relative object-cover overflow-hidden rounded-full w-full"
               src={skill.img}
               alt=""
             />
-            <span className=" percent hidden absolute top-8 bottom-10 left-8 right-10 text-2xl bg-white">
+            <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
               {skill.percent}
             </span>
           </div>
