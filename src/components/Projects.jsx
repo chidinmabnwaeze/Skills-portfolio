@@ -83,10 +83,7 @@ const Projects = () => {
             className="flex-shrink-0 w-full mb-20 bg-white shadow-2xl rounded-lg border p-4"
             key={project.title}
           >
-            <a
-              href="https://github.com/guavacoderepo/SOFT40161-COURSE-WORK"
-              target="_blank"
-            >
+            <a href={project.link} target="_blank">
               <div className="image">
                 <img
                   src={project.img}
