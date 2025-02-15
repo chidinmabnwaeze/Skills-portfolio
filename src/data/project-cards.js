@@ -32,7 +32,7 @@ export const myProjects = [
   },
   {
     img: edaProject2,
-    title: `Project 2: Machine Learning Analysis on Developer/nCompensation: Stack Overflow 2024`,
+    title: `Project 2: Machine Learning Analysis on Developer${"\n"}Compensation: Stack Overflow 2024`,
     icons: {
       skills: [
         { icon: python },

@@ -66,11 +66,13 @@
 
 import React from "react";
 import { myProjects } from "../data/project-cards";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <main id="projects" className="mt-16 p-4 rounded-md js-scroll hideScroll">
+    <main
+      id="projects"
+      className="mx-24 mt-16 p-4 rounded-md js-scroll hideScroll"
+    >
       {/* Title */}
       <div className="title m-8 text-center">
         <h1 className="text-3xl font-medium">Projects</h1>
@@ -92,7 +94,7 @@ const Projects = () => {
                 />
               </div>
               <div className="text-part text-center mt-5">
-                <h1 className="text-2xl font-bold whitespace-pre-line hover:text-purple-700">
+                <h1 className="text-2xl font-bold whitespace-pre-line hover:text-purple-700 transition">
                   {project.title}
                 </h1>
                 <div className="icons flex justify-center gap-3 p-2">

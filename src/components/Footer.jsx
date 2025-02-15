@@ -16,7 +16,7 @@ const Footer = () => {
         <a className="sm-link m-1" href="#">
           <i class="fa-brands fa-x-twitter text-2xl"></i>
         </a>
-        <a className="sm-link m-1" href="#">
+        <a className="sm-link m-1" href="https://github.com/guavacoderepo">
           <i class="bx bxl-github text-2xl"></i>
         </a>
       </div>

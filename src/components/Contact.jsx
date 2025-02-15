@@ -13,7 +13,7 @@ const Contact = () => {
         <h1 className="text-3xl font-medium">Contact</h1>
         <p>Get in touch with me</p>
       </div>
-      <section className="flex">
+      <section className="flex justify-center">
         <div className="contactInfo">
           <div className="phone flex items-center m-4">
             <span className="rounded-full mr-6 p-4 shadow-lg bg-slate-200">
@@ -21,7 +21,7 @@ const Contact = () => {
             </span>
             <span>
               <h3 className="font-medium text-lg">Phone Number</h3>
-              <p className="text-sm text-gray-400">08022409706</p>
+              <p className="text-sm text-gray-400">+44 7551 119942</p>
             </span>
           </div>
           <div className="email flex items-center m-4">
@@ -30,9 +30,7 @@ const Contact = () => {
             </span>
             <span>
               <h3 className="font-medium text-lg">Email Address</h3>
-              <p className="text-sm text-gray-400">
-                bayzelintegratedservices@gmail.com
-              </p>
+              <p className="text-sm text-gray-400">everistusnwogo@gmail.com</p>
             </span>
           </div>
           <div className="map flex items-center m-4">
@@ -42,7 +40,7 @@ const Contact = () => {
             <span>
               <h3 className="font-medium text-lg">Address</h3>
               <p className="text-sm text-gray-400">
-                Nymex Plaza,No 2 GadoNasko road,By NNPC Bustop, Kubwa Abuja
+                Lenton NG7 1HL, Nottingham, UK
               </p>
             </span>
           </div>
