@@ -29,7 +29,7 @@ export const myProjects = [
   },
   {
     img: projectimg,
-    title: "Project 2: Masters in Data Science",
+    title: `Project 2: Machine Learning Analysis on Developer/nCompensation: Stack Overflow 2024`,
     icons: {
       skills: [
         { icon: python },
@@ -40,8 +40,7 @@ export const myProjects = [
         { icon: git },
       ],
     },
-    about:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a, abculpa sunt deleniti quod nisi velit! Libero in quae sun excepturiasperiores ipsum earum, doloremque porro nobis impedit laborum? ipsumdolor sit amet consectetur adipisicing elit. Dolorem a, ab culpa suntdeleniti quod nisi velit! Libero in quae sunt excepturi asperiores ipsumearum, doloremque porro nobis impedit laborum? ipsum dolor sit ametconsectetur adipisicing elit. Dolorem a, ab culpa sunt deleniti quodnisi velit! Libero in quae sunt excepturi asperiores ipsum earudoloremque porro nobis impedit laborum?",
+    about: ` This project (coursework) focuses on applying various machine learning (ML) models to analyze and predict developers' annual compensation. The study leverages data from the ${`"Stack Overflow 2024 Annual Developer Survey"`}, which captures information about the annual salaries of developers from diverse countries, industries, skills, and experience levels. The primary objectives of this project include performing Clustering Analysis (Unsupervised Learning) to group developers based on similar compensation patterns, Classification (Supervised Learning) to categorize developers into high and low-income groups, and Regression Analysis (Supervised Learning) to predict their annual compensation.`,
   },
   {
     img: projectimg,

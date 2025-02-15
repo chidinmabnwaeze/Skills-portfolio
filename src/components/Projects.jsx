@@ -66,6 +66,7 @@
 
 import React from "react";
 import { myProjects } from "../data/project-cards";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -76,37 +77,40 @@ const Projects = () => {
         <p>Here are some of my projects</p>
       </div>
 
-      {/* Scrollable Container */}
-
       <div className="scroll-container gap-4 p-4">
         {myProjects.map((project) => (
           <section
-            key={project.title}
             className="flex-shrink-0 w-full mb-20 bg-white shadow-2xl rounded-lg border p-4"
+            key={project.title}
           >
-            <div className="image">
-              <img
-                src={project.img}
-                alt="project-image"
-                className="w-full m-auto rounded-md shadow-lg"
-              />
-            </div>
-            <div className="text-part text-center mt-4">
-              <h1 className="text-2xl font-bold">{project.title}</h1>
-              <div className="icons flex justify-center gap-3 p-2">
-                {project.icons?.skills?.map((skill, index) => (
-                  <img
-                    className="w-6"
-                    src={skill.icon}
-                    alt="skill-icon"
-                    key={index}
-                  />
-                ))}
-                {/* <img className="w-6" src={project.icons.icon2} alt="flask" />
-                <img className="w-6" src={project.icons.icon3} alt="dart" /> */}
+            <a
+              href="https://github.com/guavacoderepo/SOFT40161-COURSE-WORK"
+              target="_blank"
+            >
+              <div className="image">
+                <img
+                  src={project.img}
+                  alt="project-image"
+                  className="w-full m-auto rounded-md"
+                />
               </div>
-              <p className="text-gray-700 text-sm">{project.about}</p>
-            </div>
+              <div className="text-part text-center mt-5">
+                <h1 className="text-2xl font-bold whitespace-pre-line hover:text-purple-700">
+                  {project.title}
+                </h1>
+                <div className="icons flex justify-center gap-3 p-2">
+                  {project.icons?.skills?.map((skill, index) => (
+                    <img
+                      className="w-9"
+                      src={skill.icon}
+                      alt="skill-icon"
+                      key={index}
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 mt-2">{project.about}</p>
+              </div>
+            </a>
           </section>
         ))}
       </div>
