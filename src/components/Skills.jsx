@@ -67,7 +67,7 @@ const Skills = () => {
             <img
               className="stack-img relative object-cover overflow-hidden rounded-full w-full"
               src={skill.img}
-              alt=""
+              alt="tech stack icon"
             />
             <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
               {skill.percent}

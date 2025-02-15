@@ -21,7 +21,10 @@ import wavinghand from "../assets/images/waving-hand.png";
 const Home = () => {
   const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
-    const sections = document.querySelectorAll(".js-scroll");
+    const sections = document.querySelectorAll(
+      ".js-scroll",
+      ".scroll-container"
+    );
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -33,7 +36,7 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => observer.observe(section));
