@@ -18,6 +18,20 @@ const Experience = () => {
       date: "Jul-2024 - September 2024",
     },
   ];
+  const education = [
+    {
+      course: "Msc Artificial Intelligence",
+      school: "Nottingham Trent University",
+      location: "United Kingdom",
+      date: "September  2024 - Present",
+    },
+    {
+      course: "BEng (Hons), Computer Engineering",
+      school: "Michael Okpara​ University of Agriculture",
+      location: "Umudike",
+      date: "September 2015 - October  2020",
+    },
+  ];
   const line = [
     {
       circle: ".",
@@ -44,8 +58,9 @@ const Experience = () => {
         <p>My experience both academically & professionally -- </p>
       </div>
       <section className="exp">
-        <div className="subheads flex justify-center items-center">
+        {/* <div className="subheads flex justify-center items-center">
           <button
+            id="academic"
             className={` mr-8 flex items-center academic ${
               activeTab === "academic"
                 ? "bg-purple-700 text-white p-2 rounded flex "
@@ -68,34 +83,64 @@ const Experience = () => {
             <i class="bx bxs-briefcase"></i>
             <p className="m-1">Professional</p>
           </button>
-        </div>
-        <div className="exp-body">
-          {/* trying to make this line duplicate everytime a new experience is added */}
-          {line.forEach((experience) => {
+        </div> */}
+        {/* trying to make this line duplicate everytime a new experience is added */}
+        {/* {line.forEach((experience) => {
             if (exp.length) {
               line.push(experience);
-            }
-            <div className="flex flex-col justify-center items-center">
+              }
+              <div className="flex flex-col justify-center items-center">
               <div className="rounded-full bg-purple-700 w-6">
-                {experience.circle}
+              {experience.circle}
               </div>
               <div className="line h-20 w-1 bg-purple-700">
-                {experience.line}
+              {experience.line}
               </div>
-            </div>;
-          })}
-          {exp.map((xp, index) => (
-            <div className="m-2" key={index}>
-              <div>
-                <h1 className="font-semibold ">{xp.role}</h1>
-                <p>{xp.org}</p>
-              </div>
-              <span className="text-gray-500 text-sm">
-                <i class="bx bx-calendar"></i>
-                {xp.date}
-              </span>
+              </div>;
+              })} */}
+
+        <div className="exp-body flex justify-center">
+          <section className="edu-section m-5 mr-14">
+            <div>
+              <h1 className="font-semibold text-xl text-purple-700">
+                Education
+              </h1>
             </div>
-          ))}
+            {education.map((edu, index) => (
+              <div className="eduContent my-2" key={index}>
+                <div className="py-3">
+                  <h1 className="course font-medium">{edu.course}</h1>
+                  <p>{edu.school}</p>
+                  <p className="text-sm text-gray-500">{edu.location}</p>
+                </div>
+                <span className="text-gray-500 text-sm">
+                  <i class="bx bx-calendar"></i>
+                  {edu.date}
+                </span>
+              </div>
+            ))}
+          </section>
+
+          <section className="experience-section m-5 ">
+            <div>
+              <p className="title font-semibold text-xl text-purple-700">
+                {" "}
+                Work Experience
+              </p>
+            </div>
+            {exp.map((xp, index) => (
+              <div className="my-2" key={index}>
+                <div className="py-3">
+                  <h1 className="font-medium ">{xp.role}</h1>
+                  <p>{xp.org}</p>
+                </div>
+                <span className="text-gray-500 text-sm">
+                  <i class="bx bx-calendar"></i>
+                  {xp.date}
+                </span>
+              </div>
+            ))}
+          </section>
         </div>
       </section>
     </main>

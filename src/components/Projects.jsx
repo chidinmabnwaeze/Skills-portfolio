@@ -71,11 +71,11 @@ const Projects = () => {
   return (
     <main
       id="projects"
-      className="mx-24 mt-16 p-4 rounded-md js-scroll hideScroll"
+      className="project mx-24 mt-16 p-4 rounded-md js-scroll hideScroll"
     >
       {/* Title */}
       <div className="title m-8 text-center">
-        <h1 className="text-3xl font-medium">Projects</h1>
+        <h1 className="text-3xl font-medium respon">Projects</h1>
         <p>Here are some of my projects</p>
       </div>
 

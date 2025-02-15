@@ -13,7 +13,7 @@ const Contact = () => {
         <h1 className="text-3xl font-medium">Contact</h1>
         <p>Get in touch with me</p>
       </div>
-      <section className="flex justify-center">
+      <section className="contact-section flex justify-center">
         <div className="contactInfo">
           <div className="phone flex items-center m-4">
             <span className="rounded-full mr-6 p-4 shadow-lg bg-slate-200">
