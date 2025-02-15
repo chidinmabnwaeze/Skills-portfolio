@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Experience = () => {
   const exp = [
@@ -28,6 +28,15 @@ const Experience = () => {
       line: ".",
     },
   ];
+
+  const [activeTab, setActiveTab] = useState("professional");
+  const handleTab = () => {
+    if (activeTab === "professional") {
+      setActiveTab(activeTab);
+    } else if (activeTab === "academic") {
+      setActiveTab(activeTab);
+    }
+  };
   return (
     <main id="experience" className="mt-32 mx-16 js-scroll hideScroll">
       <div className="title m-12 text-center">
@@ -36,12 +45,29 @@ const Experience = () => {
       </div>
       <section className="exp">
         <div className="subheads flex justify-center items-center">
-          <span className=" mr-8 p-4">
-            <i class="bx bxs-graduation"></i>Academic
-          </span>
-          <span>
-            <i class="bx bxs-briefcase"></i>Professional
-          </span>
+          <button
+            className={` mr-8 flex items-center academic ${
+              activeTab === "academic"
+                ? "bg-purple-700 text-white p-2 rounded flex "
+                : ""
+            }`}
+            onClick={handleTab}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          >
+            <i class="bx bxs-graduation"></i>
+            <p className="m-1">Academic</p>
+          </button>
+          <button
+            className={`professional flex items-center p-2 ${
+              activeTab === "professional"
+                ? "bg-purple-700 text-white rounded "
+                : ""
+            }`}
+          >
+            <i class="bx bxs-briefcase"></i>
+            <p className="m-1">Professional</p>
+          </button>
         </div>
         <div className="exp-body">
           {/* trying to make this line duplicate everytime a new experience is added */}

@@ -71,32 +71,39 @@ const Projects = () => {
   return (
     <main id="projects" className="mt-16 p-4 rounded-md js-scroll hideScroll">
       {/* Title */}
-      <div className="title m-12 text-center">
+      <div className="title m-8 text-center">
         <h1 className="text-3xl font-medium">Projects</h1>
         <p>Here are some of my projects</p>
       </div>
 
       {/* Scrollable Container */}
 
-      <div className="scroll-container flex gap-4 overflow-x-scroll scroll-smooth hide-scrollbar p-4 bg-purple-400">
+      <div className="scroll-container gap-4 p-4">
         {myProjects.map((project) => (
           <section
             key={project.title}
-            className="flex-shrink-0 w-[800px] bg-white shadow-lg rounded-md p-4"
+            className="flex-shrink-0 w-full mb-20 bg-white shadow-2xl rounded-lg border p-4"
           >
             <div className="image">
               <img
                 src={project.img}
                 alt="project-image"
-                className="w-full rounded-md"
+                className="w-full m-auto rounded-md shadow-lg"
               />
             </div>
             <div className="text-part text-center mt-4">
               <h1 className="text-2xl font-bold">{project.title}</h1>
               <div className="icons flex justify-center gap-3 p-2">
-                <img className="w-6" src={project.icons.icon1} alt="python" />
-                <img className="w-6" src={project.icons.icon2} alt="flask" />
-                <img className="w-6" src={project.icons.icon3} alt="dart" />
+                {project.icons?.skills?.map((skill, index) => (
+                  <img
+                    className="w-6"
+                    src={skill.icon}
+                    alt="skill-icon"
+                    key={index}
+                  />
+                ))}
+                {/* <img className="w-6" src={project.icons.icon2} alt="flask" />
+                <img className="w-6" src={project.icons.icon3} alt="dart" /> */}
               </div>
               <p className="text-gray-700 text-sm">{project.about}</p>
             </div>

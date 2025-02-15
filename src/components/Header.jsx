@@ -18,8 +18,8 @@ const Header = ({ handleMenuClick, activeSection }) => {
     "skills",
     "experience",
     "projects",
-    "services",
-    "references",
+    // "services",
+    // "references",
     "contact",
   ];
   return (

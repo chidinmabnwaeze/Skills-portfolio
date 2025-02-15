@@ -120,7 +120,7 @@ const Home = () => {
         {/* about section */}
         <section
           id="about"
-          className="about mx-16 flex flex-col items-center justify-center js-scroll hideScroll"
+          className="about mx-32 flex flex-col items-center justify-center js-scroll hideScroll"
         >
           <div className="title m-12">
             <h1 className="text-3xl font-medium">About Me</h1>
@@ -134,24 +134,17 @@ const Home = () => {
             />
 
             <div className="info ml-10">
-              <article>
-                I am Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam et quia sed accusamus commodi eum, assumenda debitis
-                eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
-                nihil fuga ab quia? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Veniam et quia sed accusamus commodi eum,
-                assumenda debitis eaque officia unde facere, quibusdam fugiat
-                ea. Illum voluptas nihil fuga ab quia? Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Veniam et quia sed accusamus
-                commodi eum, assumenda debitis eaque officia unde facere,
-                quibusdam fugiat ea. Illum voluptas nihil fuga ab quia? Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Veniam et
-                quia sed accusamus commodi eum, assumenda debitis eaque officia
-                unde facere, quibusdam fugiat ea. Illum voluptas nihil fuga ab
-                quia? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veniam et quia sed accusamus commodi eum, assumenda debitis
-                eaque officia unde facere, quibusdam fugiat ea. Illum voluptas
-                nihil fuga ab quia?
+              <article className="text-lg">
+                A detail-oriented and experienced engineer with over 2 years of
+                experience in software design, development, and analysis,
+                complemented by my AI engineering skills. I have a proven track
+                record of managing analytic servers, optimizing database
+                systems, and providing technical support. Currently pursuing an
+                MSc in Artificial Intelligence, I seek an opportunity in a
+                tech-forward organization to apply my technical expertise to
+                drive innovation and enhance data-driven decision-making. I am
+                committed to delivering impactful solutions through a
+                combination of practical and academic experience.
               </article>
               <section className="figures flex justify-center items-center mt-16">
                 <div className="mr-10 text-center">
@@ -176,8 +169,8 @@ const Home = () => {
         <Skills />
         <Experience />
         <Projects />
-        <Services />
-        <References />
+        {/* <Services /> */}
+        {/* <References /> */}
         <Contact />
         <Footer />
       </section>
