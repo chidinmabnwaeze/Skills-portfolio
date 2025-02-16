@@ -164,12 +164,11 @@ html {
 @media only screen and (max-width: 900px) {
   .menuIcon {
     display: block;
-    cursor: pointer;
   }
   .nav-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     right: 0;
     width: 100%;
     background: white;
@@ -178,13 +177,13 @@ html {
     align-items: center;
     padding: 1rem 0;
   }
-  .nav ul li,
-  .nav-link {
+  .nav ul {
     flex-direction: column;
     gap: 1rem;
   }
   .showLinks {
     display: flex;
+    flex-direction: column;
   }
   .header {
     justify-content: space-between;
@@ -235,12 +234,11 @@ html {
 @media only screen and (max-width: 1200px) {
   .menuIcon {
     display: block;
-    cursor: pointer;
   }
   .nav-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     right: 0;
     width: 100%;
     background: white;
@@ -249,12 +247,14 @@ html {
     align-items: center;
     padding: 1rem 0;
   }
-  .nav ul li {
+  .nav ul,
+  .nav-link {
     flex-direction: column;
     gap: 1rem;
   }
   .showLinks {
     display: flex;
+    flex-direction: column;
   }
   .header {
     justify-content: space-between;

@@ -40,6 +40,8 @@ const Header = ({ handleMenuClick, activeSection }) => {
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState);
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("showLinks");
   };
 
   return (
@@ -61,10 +63,10 @@ const Header = ({ handleMenuClick, activeSection }) => {
         </a>
       </div>
       <nav className="navbar flex mr-7">
-        <nav className="menuIcon hidden" onClick={toggleMenu}>
+        <nav className="menuIcon hidden cursor-pointer" onClick={toggleMenu}>
           <i class="bx bx-menu-alt-right text-2xl text-purple-700"></i>
         </nav>
-        <div className={`nav-menu flex ${menuOpen ? "showLinks" : "hidden"}`}>
+        <div className="nav-menu ">
           <ul className="nav flex">
             {menu.map((id) => (
               <li className="nav-list mr-6" key={id}>
