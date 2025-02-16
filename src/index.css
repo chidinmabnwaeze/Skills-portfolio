@@ -177,7 +177,7 @@ html {
     align-items: center;
     padding: 1rem 0;
   }
-  .nav ul {
+  .nav {
     flex-direction: column;
     gap: 1rem;
   }
@@ -232,7 +232,7 @@ html {
 }
 
 @media only screen and (max-width: 1200px) {
-  .menuIcon {
+  /* .menuIcon {
     display: block;
   }
   .nav-menu {
@@ -255,7 +255,7 @@ html {
   .showLinks {
     display: flex;
     flex-direction: column;
-  }
+  } */
   .header {
     justify-content: space-between;
     margin-right: 0;
