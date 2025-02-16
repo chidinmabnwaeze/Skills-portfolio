@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import profile from "../assets/images/image.png";
 
 const Header = ({ handleMenuClick, activeSection }) => {
@@ -22,6 +22,26 @@ const Header = ({ handleMenuClick, activeSection }) => {
     // "references",
     "contact",
   ];
+
+  // const navToggle = document.querySelector(".showLink");
+  // const links = document.querySelector(".links");
+
+  // const toggle = () => {
+  //   navToggle.addEventListener("click", () => {
+  //     if (links.contains("showLink")) {
+  //       links.classList.remove(".showLink");
+  //     } else {
+  //       links.classList.add(".showLinks");
+  //     }
+  //   });
+  // };
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <header
       className="header flex p-4 w-full fixed top-0 justify-center items-center z-10 bg-white shadow-sm"
@@ -41,10 +61,10 @@ const Header = ({ handleMenuClick, activeSection }) => {
         </a>
       </div>
       <nav className="navbar flex mr-7">
-        <nav className="menuIcon hidden">
+        <nav className="menuIcon hidden" onClick={toggleMenu}>
           <i class="bx bx-menu-alt-right text-2xl text-purple-700"></i>
         </nav>
-        <div className="nav-menu">
+        <div className={`nav-menu flex ${menuOpen ? "showLinks" : "hidden"}`}>
           <ul className="nav flex">
             {menu.map((id) => (
               <li className="nav-list mr-6" key={id}>
