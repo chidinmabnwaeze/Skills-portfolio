@@ -163,9 +163,9 @@ const Skills = () => {
   <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
     {skills.map((skill, index) => (
       <section key={index} className="flex flex-col items-center justify-center">
-        <div className="stack relative rounded-full w-24 border-2 border-gray-300 p-1">
+        <div className="stack relative rounded-full w-24 h-24 border-2 border-gray-300 p-1 overflow-hidden">
           <img
-            className="stack-img relative object-cover overflow-hidden rounded-full w-full"
+            className="stack-img object-cover w-full h-full"
             src={skill.img}
             alt={skill.title}
           />
