@@ -3,35 +3,35 @@ import React, { useState } from "react";
 const Experience = () => {
   const exp = [
     {
-      role: "Lead Backend engineer",
-      org: "Future feet",
-      date: "Jul-2024 - September 2024",
+      role: "Software Engineer",
+      org: "Nextwear Technologies",
+      date: "July 2022 - July 2024",
     },
     {
-      role: "Lead Backend engineer",
-      org: "Future feet",
-      date: "Jul-2024 - September 2024",
+      role: "AI and Data Engineer",
+      org: "Gallery of Code",
+      date: "March 2023 - June 2024",
     },
-    {
-      role: "Lead Backend engineer",
-      org: "Future feet",
-      date: "Jul-2024 - September 2024",
-    },
+    // {
+    //   role: "Lead Backend engineer",
+    //   org: "Future feet",
+    //   date: "Jul-2024 - September 2024",
+    // },
   ];
 
-  
+
   const education = [
     {
       course: "Msc Artificial Intelligence",
       school: "Nottingham Trent University",
       location: "United Kingdom",
-      date: "September  2024 - Present",
+      date: "September 2024 - Present",
     },
     {
       course: "BEng (Hons), Computer Engineering",
-      school: "Michael Okpara​ University of Agriculture",
-      location: "Umudike",
-      date: "September 2015 - October  2020",
+      school: "Michael Okpara University of Agriculture",
+      location: "Nigeria",
+      date: "September 2015 - October 2020",
     },
   ];
   const line = [
