@@ -18,6 +18,8 @@ const Experience = () => {
       date: "Jul-2024 - September 2024",
     },
   ];
+
+  
   const education = [
     {
       course: "Msc Artificial Intelligence",

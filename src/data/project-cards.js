@@ -1,26 +1,18 @@
-import projectimg from "../assets/images/sample_exp_pic.png";
-import python from "../assets/icons/python.png";
-import matplot from "../assets/icons/matplot.png";
-import pandas from "../assets/icons/pandas.png";
-import seaborn from "../assets/icons/seaborn.png";
-import tkinter from "../assets/icons/tkinter.png";
-import edaProject from "../assets/images/eda.png";
-import edaProject2 from "../assets/images/eda_2.png";
-import git from "../assets/icons/git.png";
-import sklearn from "../assets/icons/Sklearn.png";
+import * as prj from "../assets/images/index.jsx"
+import * as icons from "../assets/icons/index.js"
 
 export const myProjects = [
   {
-    img: edaProject,
+    img: prj.edaProject,
     title: "Employee mental health Analysis",
     icons: {
       skills: [
-        { icon: python },
-        { icon: pandas },
-        { icon: matplot },
-        { icon: seaborn },
-        { icon: tkinter },
-        { icon: git },
+        { icon: icons.python },
+        { icon: icons.pandas },
+        { icon: icons.matplot },
+        { icon: icons.seaborn },
+        { icon: icons.tkinter },
+        { icon: icons.github },
       ],
     },
     about: `This project delves into the analysis of mental health cases among employees across 
@@ -31,16 +23,16 @@ export const myProjects = [
   },
 
   {
-    img: edaProject2,
+    img: prj.edaProject2,
     title: `Machine Learning Analysis on Developer Compensation`,
     icons: {
       skills: [
-        { icon: python },
-        { icon: pandas },
-        { icon: matplot },
-        { icon: seaborn },
-        { icon: sklearn },
-        { icon: git },
+        { icon: icons.python },
+        { icon: icons.pandas },
+        { icon: icons.matplot },
+        { icon: icons.seaborn },
+        { icon: icons.sklearn },
+        { icon: icons.github },
       ],
     },
     about: ` This project applies machine learning models to analyze and 
@@ -53,16 +45,16 @@ export const myProjects = [
   },
 
   {
-    img: projectimg,
+    img: prj.projectimg,
     title: "Crime Analysis forcasting",
     icons: {
       skills: [
-        { icon: python },
-        { icon: pandas },
-        { icon: matplot },
-        { icon: seaborn },
-        { icon: tkinter },
-        { icon: git },
+        { icon: icons.python },
+        { icon: icons.pandas },
+        { icon: icons.matplot },
+        { icon: icons.seaborn },
+        { icon: icons.tkinter },
+        { icon: icons.github },
       ],
     },
     about: ` This project focuses on analyzing crime trends in Nigeria through data collected by 

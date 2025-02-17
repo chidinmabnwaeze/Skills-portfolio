@@ -1,90 +1,123 @@
 import React from "react";
-import aws from "../assets/icons/aws.png";
-import dart from "../assets/icons/dart.png";
-import c from "../assets/icons/c.png";
-import node from "../assets/icons/node img.png";
-import flask from "../assets/icons/flask.png";
-import mongo from "../assets/icons/mongodb.png";
-import git from "../assets/icons/git.png";
-import python from "../assets/icons/python.png";
-import mysql from "../assets/icons/sql.png";
-import matplot from "../assets/icons/matplot.png";
-import pandas from "../assets/icons/pandas.png";
-import seaborn from "../assets/icons/seaborn.png";
-import tkinter from "../assets/icons/tkinter.png";
-import sklearn from "../assets/icons/Sklearn.png";
+import * as icons from "../assets/icons/index.js"
 
 const Skills = () => {
   const skills = [
     {
-      img: aws,
-      percent: "60%",
-      title: "Amazon Web services",
+      img: icons.python,
+      percent: "90%",
+      title: "Python",
     },
+
     {
-      img: pandas,
+      img: icons.pandas,
       percent: "70%",
       title: "Pandas",
     },
     {
-      img: seaborn,
+      img: icons.seaborn,
       percent: "70%",
       title: "Seaborn",
     },
     {
-      img: tkinter,
-      percent: "70%",
-      title: "Tkinter",
-    },
-    {
-      img: sklearn,
+      img: icons.sklearn,
       percent: "70%",
       title: "Sklearn",
     },
     {
-      img: dart,
-      percent: "70%",
-      title: "Dart",
-    },
-    {
-      img: matplot,
-      percent: "70%",
-      title: "Matplot",
-    },
-    {
-      img: python,
-      percent: "90%",
-      title: "Python",
-    },
-    {
-      img: c,
+      img: icons.airflow,
       percent: "60%",
-      title: "C",
+      title: "Airflow",
     },
     {
-      img: node,
+      img: icons.matplot,
       percent: "70%",
-      title: "Node js",
+      title: "Matplotlib",
     },
     {
-      img: flask,
+      img: icons.azure,
       percent: "60%",
-      title: "Flask",
+      title: "Azure",
     },
     {
-      img: git,
-      percent: "90%",
-      title: "Git",
+      img: icons.github,
+      percent: "80%",
+      title: "GitHub",
     },
     {
-      img: mongo,
+      img: icons.mysql,
+      percent: "80%",
+      title: "MySQL",
+    },
+    {
+      img: icons.docker,
+      percent: "70%",
+      title: "Docker",
+    },
+    {
+      img: icons.javascript,
+      percent: "70%",
+      title: "JavaScript",
+    },
+    {
+      img: icons.mongodb,
       percent: "80%",
       title: "MongoDB",
     },
     {
-      img: mysql,
+      img: icons.sql,
       percent: "80%",
-      title: "MySQL",
+      title: "SQL",
+    },
+    {
+      img: icons.tkinter,
+      percent: "70%",
+      title: "Tkinter",
+    },
+    {
+      img: icons.chatgpt,
+      percent: "50%",
+      title: "ChatGPT",
+    },
+    {
+      img: icons.databricks,
+      percent: "60%",
+      title: "Databricks",
+    },
+    {
+      img: icons.django,
+      percent: "70%",
+      title: "Django",
+    },
+    {
+      img: icons.kafka,
+      percent: "85%",
+      title: "Kafka",
+    },
+    {
+      img: icons.numpy,
+      percent: "80%",
+      title: "NumPy",
+    },
+    {
+      img: icons.postgres,
+      percent: "90%",
+      title: "PostgreSQL",
+    },
+    {
+      img: icons.powerbi,
+      percent: "95%",
+      title: "PowerBI",
+    },
+    {
+      img: icons.spark,
+      percent: "70%",
+      title: "Apache Spark",
+    },
+    {
+      img: icons.aws,
+      percent: "60%",
+      title: "Amazon Web Services",
     },
   ];
 
