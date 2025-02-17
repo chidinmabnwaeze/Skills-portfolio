@@ -76,7 +76,7 @@ const Home = () => {
               <img src={wavinghand} alt="wave image" />
             </span>
             <p className="text-xl flex mt-2 ">
-              and I am a AI & Data Engineer
+              I am an AI & Data Engineer
               <img className="emoji h-8" src={man} alt="" />
             </p>
             <div className="summary mt-6">
