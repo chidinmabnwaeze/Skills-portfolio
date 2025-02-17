@@ -20,7 +20,7 @@ import mongodb from "./mongodb.png";
 import mysql from "./mysql.png";
 import numpy from "./numpy.png";
 import postgres from "./postgres.png";
-import powerbi from "./powerbi.png";
+import powerbi from "./power-bi.png";
 import spark from "./spark.png";
 import sql from "./sql.png";
 
