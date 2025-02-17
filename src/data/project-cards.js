@@ -15,7 +15,7 @@ export const myProjects = [
     title: "Employee mental health Analysis",
     icons: {
       skills: [
-        { icon: "../assets/icons/python.png" },
+        { icon: python },
         { icon: pandas },
         { icon: matplot },
         { icon: seaborn },
