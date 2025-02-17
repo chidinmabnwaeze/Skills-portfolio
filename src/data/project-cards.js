@@ -1,4 +1,4 @@
-import * as prj from "../assets/images/index.jsx"
+import * as prj from "../assets/images/index.js"
 import * as icons from "../assets/icons/index.js"
 
 export const myProjects = [
