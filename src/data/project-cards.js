@@ -3,7 +3,7 @@ import * as icons from "../assets/icons/index.js"
 
 export const myProjects = [
   {
-    img: prj.edaProject,
+    img: prj.mentalhealth,
     title: "Employee mental health Analysis",
     icons: {
       skills: [
@@ -23,7 +23,7 @@ export const myProjects = [
   },
 
   {
-    img: prj.edaProject2,
+    img: prj.dev,
     title: `Machine Learning Analysis on Developer Compensation`,
     icons: {
       skills: [
@@ -45,7 +45,7 @@ export const myProjects = [
   },
 
   {
-    img: prj.projectimg,
+    img: prj.crime,
     title: "Crime Analysis forcasting",
     icons: {
       skills: [
