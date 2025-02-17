@@ -162,7 +162,7 @@ const Skills = () => {
   </div>
   <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
     {skills.map((skill, index) => (
-      <section key={index}>
+      <section key={index} className="flex flex-col items-center justify-center">
         <div className="stack relative rounded-full w-24 border-2 border-gray-300 p-1">
           <img
             className="stack-img relative object-cover overflow-hidden rounded-full w-full"
@@ -171,13 +171,14 @@ const Skills = () => {
           />
         </div>
         {/* Always show proficiency text without hover */}
-        <p className="percent text-sm text-center text-gray-700">
+        <p className="percent text-sm text-center text-gray-700 mt-2">
           {skill.title}
         </p>
       </section>
     ))}
   </main>
 </section>
+
 
   );
 };
