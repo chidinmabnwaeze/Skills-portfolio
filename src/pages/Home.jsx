@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
-import profile from "../assets/images/image.png";
+import profile from "../assets/images/evan.jpg";
 import profilePic from "../assets/images/image.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
@@ -127,11 +127,11 @@ const Home = () => {
             <p>Get to know me!</p>
           </div>
           <div className="aboutInfo flex justify-center">
-            <img
+            {/* <img
               className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
               src={profile}
               alt="my picture"
-            />
+            /> */}
 
             <div className="info ml-10">
               <article className="text-lg">
