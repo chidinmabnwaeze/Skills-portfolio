@@ -1,7 +1,5 @@
 import projectimg from "../assets/images/sample_exp_pic.png";
 import python from "../assets/icons/python.png";
-import flask from "../assets/icons/flask.png";
-import dart from "../assets/icons/dart.png";
 import matplot from "../assets/icons/matplot.png";
 import pandas from "../assets/icons/pandas.png";
 import seaborn from "../assets/icons/seaborn.png";
@@ -14,11 +12,10 @@ import sklearn from "../assets/icons/Sklearn.png";
 export const myProjects = [
   {
     img: edaProject,
-    title:
-      "Project 1: Employee mental health Analysis: Insights from Workpace Surveys",
+    title: "Employee mental health Analysis",
     icons: {
       skills: [
-        { icon: python },
+        { icon: "src/assets/icons/python.png" },
         { icon: pandas },
         { icon: matplot },
         { icon: seaborn },
@@ -26,13 +23,16 @@ export const myProjects = [
         { icon: git },
       ],
     },
-    about:
-      "  This project delves into the analysis of mental health cases among employees across various organizations. The project aims to uncover patterns and correlations that can inform better mental health practices and support systems within organizations.",
+    about: `This project delves into the analysis of mental health cases among employees across 
+      various organizations.The project aims to uncover patterns and correlations that can
+      inform better mental health practices and support systems within organizations.`,
+
     link: "https://github.com/guavacoderepo/SOFT40161-COURSE-WORK",
   },
+
   {
     img: edaProject2,
-    title: `Project 2: Machine Learning Analysis on Developer${"\n"}Compensation: Stack Overflow 2024`,
+    title: `Machine Learning Analysis on Developer Compensation`,
     icons: {
       skills: [
         { icon: python },
@@ -43,12 +43,18 @@ export const myProjects = [
         { icon: git },
       ],
     },
-    about: ` This project (coursework) focuses on applying various machine learning (ML) models to analyze and predict developers' annual compensation. The study leverages data from the ${`"Stack Overflow 2024 Annual Developer Survey"`}, which captures information about the annual salaries of developers from diverse countries, industries, skills, and experience levels. The primary objectives of this project include performing Clustering Analysis (Unsupervised Learning) to group developers based on similar compensation patterns, Classification (Supervised Learning) to categorize developers into high and low-income groups, and Regression Analysis (Supervised Learning) to predict their annual compensation.`,
+    about: ` This project applies machine learning models to analyze and 
+    predict developers' annual compensation using data from the Stack Overflow
+    2024 Annual Developer Survey. The objectives include clustering developers
+    based on compensation patterns, classifying them into high and low-income groups,
+    and using regression analysis to predict their salaries.`,
+
     link: "https://github.com/guavacoderepo/-COMP40721-COURSE-WORK",
   },
+
   {
     img: projectimg,
-    title: "Project 3: Masters in Artificial Intelligence",
+    title: "Crime Analysis forcasting",
     icons: {
       skills: [
         { icon: python },
@@ -59,8 +65,10 @@ export const myProjects = [
         { icon: git },
       ],
     },
-    about:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a, abculpa sunt deleniti quod nisi velit! Libero in quae sun excepturiasperiores ipsum earum, doloremque porro nobis impedit laborum? ipsumdolor sit amet consectetur adipisicing elit. Dolorem a, ab culpa suntdeleniti quod nisi velit! Libero in quae sunt excepturi asperiores ipsumearum, doloremque porro nobis impedit laborum? ipsum dolor sit ametconsectetur adipisicing elit. Dolorem a, ab culpa sunt deleniti quodnisi velit! Libero in quae sunt excepturi asperiores ipsum earudoloremque porro nobis impedit laborum?",
-    link: "https://github.com/guavacoderepo/-COMP40721-COURSE-WORK",
+    about: ` This project focuses on analyzing crime trends in Nigeria through data collected by 
+      scraping multiple news websites. The objective is to identify patterns and relationships
+      in criminal activities, providing insights that can guide law enforcement in improving crime
+      prevention strategies and resource allocation.`,
+    link: "https://drive.google.com/drive/folders/1PUaIuer4M07q66fzsGiT2NcUkGAOKg-4?usp=drive_link",
   },
 ];
