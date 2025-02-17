@@ -165,7 +165,7 @@ const Skills = () => {
       <section key={index} className="flex flex-col items-center justify-center">
         <div className="stack relative rounded-full w-24 h-24 border-2 border-gray-300 p-1 overflow-hidden">
           <img
-            className="stack-img object-cover w-full h-full"
+            className="stack-img object-contain w-full h-full"
             src={skill.img}
             alt={skill.title}
           />
@@ -175,6 +175,8 @@ const Skills = () => {
           {skill.title}
         </p>
       </section>
+
+      
     ))}
   </main>
 </section>
