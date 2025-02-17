@@ -135,10 +135,10 @@ const Skills = () => {
           <section className="">
             <div
               className="stack relative rounded-full w-24 border-2 border-gray-300 p-1"
-              key={index}
-            >
+              key={index}>
               <img
-                className="stack-img relative object-cover overflow-hidden rounded-full w-full"
+                // className="stack-img relative object-cover overflow-hidden rounded-full w-full"
+                className="stack-img object-cover overflow-hidden rounded-full w-full"
                 src={skill.img}
                 alt="tech stack icon"
               />
