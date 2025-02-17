@@ -23,7 +23,7 @@
 //             key={project.title}
 //           >
 //             <section className="image">
-//               <img
+//               <imgprojectimg
 //                 src={project.img}
 //                 alt="project-image"
 //                 className=" object-cover"
