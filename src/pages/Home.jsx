@@ -134,7 +134,7 @@ const Home = () => {
             /> */}
 
             <div className="info ml-10">
-              <article className="text-lg">
+              <article className="text-xlg">
                 A detail-oriented and experienced engineer with over 2 years of
                 experience in software design, development, and analysis,
                 complemented by my AI engineering skills. I have a proven track
