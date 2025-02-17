@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
-import profile from "../assets/images/evan.jpg";
+import profile from "../assets/images/image.png";
 import profilePic from "../assets/images/image.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
