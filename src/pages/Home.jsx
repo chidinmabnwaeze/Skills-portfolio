@@ -82,8 +82,8 @@ const Home = () => {
             <div className="summary mt-6">
               <p>
                 Data Science <span>&#124;</span>
-                &nbsp; Artificial Intelligence<span>&#124;</span> <br />
-                Data Engineering <span>&#124;</span>
+                &nbsp; Artificial Intelligence <span>&#124;</span> <br />
+                Data Engineering <span>&#124; </span>
                 &nbsp; Software Engineering 
               </p>
             </div>
