@@ -123,36 +123,31 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills mt-32 js-scroll hideScroll">
-      <div className="title m-12 text-center">
-        <h1 className="text-3xl font-medium">Skills</h1>
-        <p>
-          My skills and proficiency --{" "}
-          <span className="text-purple-700">Hover to see proficiency</span>
+  <div className="title m-12 text-center">
+    <h1 className="text-3xl font-medium">Skills</h1>
+    <p>
+      My skills and proficiency
+    </p>
+  </div>
+  <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
+    {skills.map((skill, index) => (
+      <section key={index}>
+        <div className="stack relative rounded-full w-24 border-2 border-gray-300 p-1">
+          <img
+            className="stack-img relative object-cover overflow-hidden rounded-full w-full"
+            src={skill.img}
+            alt={skill.title}
+          />
+        </div>
+        {/* Always show proficiency text without hover */}
+        <p className="percent text-sm text-center text-gray-700">
+          {skill.title} - {skill.percent}
         </p>
-      </div>
-      <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
-        {skills.map((skill, index) => (
-          <section className="">
-            <div
-              className="stack relative rounded-full w-24 border-2 border-gray-300 p-1"
-              key={index}>
-              <img
-                // className="stack-img relative object-cover overflow-hidden rounded-full w-full"
-                className="stack-img object-cover overflow-hidden rounded-full w-full"
-                src={skill.img}
-                alt="tech stack icon"
-              />
-              {/* <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
-                {skill.percent}
-              </span> */}
-            </div>
-            <p className="percent hidden text-sm text-center text-gray-700">
-              {skill.title}
-            </p>
-          </section>
-        ))}
-      </main>
-    </section>
+      </section>
+    ))}
+  </main>
+</section>
+
   );
 };
 
