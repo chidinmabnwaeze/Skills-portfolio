@@ -148,17 +148,17 @@ const Home = () => {
               </article>
               <section className="figures flex justify-center items-center mt-16">
                 <div className="mr-10 text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
+                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
                   <p className="text-gray-500">Years Experience</p>
                 </div>
                 <div className="mr-10 text-center">
                   <h1 className="text-2xl font-semibold text-purple-700">
-                    20+
+                    10+
                   </h1>
                   <p className="text-gray-500">Projects</p>
                 </div>
                 <div className="text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
+                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
                   <p className="text-gray-500">Companies</p>
                 </div>
               </section>
