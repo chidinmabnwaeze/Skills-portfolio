@@ -133,8 +133,8 @@ const Home = () => {
               alt="my picture"
             /> */}
 
-            <div className="info ml-10">
-              <article className="text-2xl text-center">
+           <div className="info ml-10">
+              <article className="text-2xl text-center text-gray-600">
                 A detail-oriented and experienced engineer with over 2 years of
                 experience in software design, development, and analysis,
                 complemented by my AI engineering skills. I have a proven track
