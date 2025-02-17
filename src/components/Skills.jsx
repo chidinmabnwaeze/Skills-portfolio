@@ -142,9 +142,9 @@ const Skills = () => {
                 src={skill.img}
                 alt="tech stack icon"
               />
-              <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
+              {/* <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
                 {skill.percent}
-              </span>
+              </span> */}
             </div>
             <p className="percent hidden text-sm text-center text-gray-700">
               {skill.title}
