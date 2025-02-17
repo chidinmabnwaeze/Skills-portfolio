@@ -76,15 +76,15 @@ const Home = () => {
               <img src={wavinghand} alt="wave image" />
             </span>
             <p className="text-xl flex mt-2 ">
-              and I am a Data & Software Engineer
+              and I am a AI & Data Engineer
               <img className="emoji h-8" src={man} alt="" />
             </p>
             <div className="summary mt-6">
               <p>
                 Data Science <span>&#124;</span>
-                &nbsp; Software Engineering <span>&#124;</span> <br />
-                Backend Engineering <span>&#124;</span>
-                &nbsp; Artificial Intelligence <span>&#124;</span>
+                &nbsp; Artificial Intelligence<span>&#124;</span> <br />
+                Data Engineering <span>&#124;</span>
+                &nbsp; Software Engineering 
               </p>
             </div>
             <div className="social-links flex items-center">
