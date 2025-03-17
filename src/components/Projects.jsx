@@ -23,7 +23,7 @@
 //             key={project.title}
 //           >
 //             <section className="image">
-//               <img
+//               <imgprojectimg
 //                 src={project.img}
 //                 alt="project-image"
 //                 className=" object-cover"
@@ -71,7 +71,7 @@ const Projects = () => {
   return (
     <main
       id="projects"
-      className="project mx-24 mt-16 p-4 rounded-md js-scroll hideScroll"
+      className="project mx-24 mt-16 p-6 rounded-md js-scroll hideScroll"
     >
       {/* Title */}
       <div className="title m-8 text-center">

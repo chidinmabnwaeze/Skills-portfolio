@@ -40,7 +40,7 @@ const Contact = () => {
             <span>
               <h3 className="font-medium text-lg">Address</h3>
               <p className="text-sm text-gray-400">
-                Lenton NG7 1HL, Nottingham, UK
+                Nottingham, UK
               </p>
             </span>
           </div>

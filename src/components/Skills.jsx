@@ -1,125 +1,187 @@
 import React from "react";
-import aws from "../assets/icons/aws.png";
-import dart from "../assets/icons/dart.png";
-import c from "../assets/icons/c.png";
-import node from "../assets/icons/node img.png";
-import flask from "../assets/icons/flask.png";
-import mongo from "../assets/icons/mongodb.png";
-import git from "../assets/icons/git.png";
-import python from "../assets/icons/python.png";
-import mysql from "../assets/icons/sql.png";
-import matplot from "../assets/icons/matplot.png";
-import pandas from "../assets/icons/pandas.png";
-import seaborn from "../assets/icons/seaborn.png";
-import tkinter from "../assets/icons/tkinter.png";
-import sklearn from "../assets/icons/Sklearn.png";
+import * as icons from "../assets/icons/index.js"
 
 const Skills = () => {
   const skills = [
     {
-      img: aws,
-      percent: "60%",
-      title: "Amazon Web services",
+      img: icons.python,
+      percent: "90%",
+      title: "Python",
     },
+
     {
-      img: pandas,
+      img: icons.pandas,
       percent: "70%",
       title: "Pandas",
     },
     {
-      img: seaborn,
+      img: icons.seaborn,
       percent: "70%",
       title: "Seaborn",
     },
     {
-      img: tkinter,
-      percent: "70%",
-      title: "Tkinter",
-    },
-    {
-      img: sklearn,
+      img: icons.sklearn,
       percent: "70%",
       title: "Sklearn",
     },
     {
-      img: dart,
-      percent: "70%",
-      title: "Dart",
-    },
-    {
-      img: matplot,
-      percent: "70%",
-      title: "Matplot",
-    },
-    {
-      img: python,
-      percent: "90%",
-      title: "Python",
-    },
-    {
-      img: c,
+      img: icons.airflow,
       percent: "60%",
-      title: "C",
+      title: "Airflow",
     },
     {
-      img: node,
+      img: icons.matplot,
       percent: "70%",
-      title: "Node js",
+      title: "Matplotlib",
     },
     {
-      img: flask,
+      img: icons.azure,
       percent: "60%",
-      title: "Flask",
+      title: "Azure",
     },
     {
-      img: git,
-      percent: "90%",
-      title: "Git",
+      img: icons.github,
+      percent: "80%",
+      title: "GitHub",
     },
     {
-      img: mongo,
+      img: icons.mysql,
+      percent: "80%",
+      title: "MySQL",
+    },
+    {
+      img: icons.docker,
+      percent: "70%",
+      title: "Docker",
+    },
+    {
+      img: icons.javascript,
+      percent: "70%",
+      title: "JavaScript",
+    },
+    {
+      img: icons.mongodb,
       percent: "80%",
       title: "MongoDB",
     },
     {
-      img: mysql,
+      img: icons.sql,
       percent: "80%",
-      title: "MySQL",
+      title: "SQL",
+    },
+    {
+      img: icons.tkinter,
+      percent: "70%",
+      title: "Tkinter",
+    },
+    {
+      img: icons.chatgpt,
+      percent: "50%",
+      title: "ChatGPT",
+    },
+    {
+      img: icons.databricks,
+      percent: "60%",
+      title: "Databricks",
+    },
+    {
+      img: icons.django,
+      percent: "70%",
+      title: "Django",
+    },
+    {
+      img: icons.kafka,
+      percent: "85%",
+      title: "Kafka",
+    },
+    {
+      img: icons.numpy,
+      percent: "80%",
+      title: "NumPy",
+    },
+    {
+      img: icons.postgres,
+      percent: "90%",
+      title: "PostgreSQL",
+    },
+    {
+      img: icons.powerbi,
+      percent: "95%",
+      title: "PowerBI",
+    },
+    {
+      img: icons.spark,
+      percent: "70%",
+      title: "Apache Spark",
+    },
+    {
+      img: icons.aws,
+      percent: "60%",
+      title: "Amazon Web Services",
     },
   ];
 
   return (
+    // <section id="skills" className="skills mt-32 js-scroll hideScroll">
+    //   <div className="title m-12 text-center">
+    //     <h1 className="text-3xl font-medium">Skills</h1>
+    //     <p>
+    //       My skills and proficiency --{" "}
+    //       <span className="text-purple-700">Hover to see proficiency</span>
+    //     </p>
+    //   </div>
+    //   <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
+    //     {skills.map((skill, index) => (
+    //       <section className="">
+    //         <div
+    //           className="stack relative rounded-full w-24 border-2 border-gray-300 p-1"
+    //           key={index}>
+    //           <img
+    //             className="stack-img relative object-cover overflow-hidden rounded-full w-full"
+    //             src={skill.img}
+    //             alt="tech stack icon"
+    //           />
+    //           {/* <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
+    //             {skill.percent}
+    //           </span> */}
+    //         </div>
+    //         <p className="percent hidden text-sm text-center text-gray-700">
+    //           {skill.title}
+    //         </p>
+    //       </section>
+    //     ))}
+    //   </main>
+    // </section>
+
     <section id="skills" className="skills mt-32 js-scroll hideScroll">
-      <div className="title m-12 text-center">
-        <h1 className="text-3xl font-medium">Skills</h1>
-        <p>
-          My skills and proficiency --{" "}
-          <span className="text-purple-700">Hover to see proficiency</span>
+  <div className="title m-12 text-center">
+    <h1 className="text-3xl font-medium">Skills</h1>
+    <p>
+      My skills and proficiency
+    </p>
+  </div>
+  <main className="skill w-2/4 grid grid-cols-8 gap-10 m-auto">
+    {skills.map((skill, index) => (
+      <section key={index} className="flex flex-col items-center justify-center">
+        <div className="stack relative rounded-full w-24 h-24 border-2 border-gray-300 p-1 overflow-hidden">
+          <img
+            className="stack-img object-contain w-full h-full"
+            src={skill.img}
+            alt={skill.title}
+          />
+        </div>
+        {/* Always show proficiency text without hover */}
+        <p className="percent text-sm text-center text-gray-700 mt-2">
+          {skill.title}
         </p>
-      </div>
-      <main className="skill w-2/4 grid grid-cols-5 gap-10 m-auto">
-        {skills.map((skill, index) => (
-          <section className="">
-            <div
-              className="stack relative rounded-full w-24 border-2 border-gray-300 p-1"
-              key={index}
-            >
-              <img
-                className="stack-img relative object-cover overflow-hidden rounded-full w-full"
-                src={skill.img}
-                alt="tech stack icon"
-              />
-              <span className=" percent hidden z-10 absolute top-8 bottom-10 left-8 right-10 text-2xl font-bold">
-                {skill.percent}
-              </span>
-            </div>
-            <p className="percent hidden text-sm text-center text-gray-700">
-              {skill.title}
-            </p>
-          </section>
-        ))}
-      </main>
-    </section>
+      </section>
+
+      
+    ))}
+  </main>
+</section>
+
+
   );
 };
 

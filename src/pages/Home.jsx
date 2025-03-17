@@ -76,15 +76,15 @@ const Home = () => {
               <img src={wavinghand} alt="wave image" />
             </span>
             <p className="text-xl flex mt-2 ">
-              and I am a Data & Software Engineer
+              I am an AI & Data Engineer
               <img className="emoji h-8" src={man} alt="" />
             </p>
             <div className="summary mt-6">
               <p>
                 Data Science <span>&#124;</span>
-                &nbsp; Software Engineering <span>&#124;</span> <br />
-                Backend Engineering <span>&#124;</span>
-                &nbsp; Artificial Intelligence <span>&#124;</span>
+                &nbsp; Artificial Intelligence <span>&#124;</span> <br />
+                Data Engineering <span>&#124; </span>
+                &nbsp; Software Engineering 
               </p>
             </div>
             <div className="social-links flex items-center">
@@ -127,14 +127,14 @@ const Home = () => {
             <p>Get to know me!</p>
           </div>
           <div className="aboutInfo flex justify-center">
-            <img
+            {/* <img
               className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
               src={profile}
               alt="my picture"
-            />
+            /> */}
 
-            <div className="info ml-10">
-              <article className="text-lg">
+           <div className="info ml-10">
+              <article className="text-xl text-center text-gray-600 p-4">
                 A detail-oriented and experienced engineer with over 2 years of
                 experience in software design, development, and analysis,
                 complemented by my AI engineering skills. I have a proven track
@@ -148,17 +148,17 @@ const Home = () => {
               </article>
               <section className="figures flex justify-center items-center mt-16">
                 <div className="mr-10 text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
+                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
                   <p className="text-gray-500">Years Experience</p>
                 </div>
                 <div className="mr-10 text-center">
                   <h1 className="text-2xl font-semibold text-purple-700">
-                    20+
+                    10+
                   </h1>
                   <p className="text-gray-500">Projects</p>
                 </div>
                 <div className="text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">4+</h1>
+                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
                   <p className="text-gray-500">Companies</p>
                 </div>
               </section>
