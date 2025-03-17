@@ -62,7 +62,7 @@ const Home = () => {
       <section className="body mx-16 my-12">
         <section
           id="home"
-          className="home h-lvh flex items-center justify-center js-scroll hideScroll"
+          className="home h-lvh flex items-center justify-center js-scroll hideScroll bg-purple-200"
         >
           <div className="introText relative">
             <span className="flex items-center">
