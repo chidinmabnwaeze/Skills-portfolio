@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.slideLeft {
+  animation: slideLeft 0.8s;
+}
+.slideRight {
+  animation: slideRight 0.8s;
+}
+
 * {
   font-family: poppins;
 }
