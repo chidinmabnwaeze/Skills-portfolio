@@ -43,7 +43,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="font-medium text-xl mt-16 mx-10 flex justify-end hover:underline cursor-pointer ">
-            <Link to="/skills">
+            <Link to="/education">
               Next
               <span>
                 <i class="bx bx-right-arrow-alt"></i>
