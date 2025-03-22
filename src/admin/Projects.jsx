@@ -13,14 +13,14 @@ const Projects = () => {
         <div className="slideRight">
           <div className=" mr-24">
             <div>
-              <h1 className="font-semibold text-2xl">Add your experience</h1>
-              <p>Tell us your experience</p>
+              <h1 className="font-semibold text-2xl">Add your projects</h1>
+              {/* <p>Tell us your experience</p> */}
             </div>
             <form action="" className="py-4">
               <div className="field1">
                 <div>
                   <label htmlFor="position" className="font-medium">
-                    Position
+                    Project Name
                   </label>
                 </div>
                 <input
@@ -28,63 +28,63 @@ const Projects = () => {
                   name="position"
                   id="position"
                   style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter your position"
+                  placeholder="Enter project name"
                 />
               </div>
               <div className="field1">
                 <div>
                   <label htmlFor="org" className="font-medium">
-                    Name of Organization
+                    Project Description
                   </label>
                 </div>
-                <input
+                <textarea
                   type="text"
                   name="org"
                   id="org"
                   style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter organization name"
+                  placeholder="Enter project description"
                 />
               </div>
               <div className="field1">
                 <div>
                   <label htmlFor="year" className="font-medium">
-                    Duration
+                    Select the skills used
                   </label>
                 </div>
                 <label htmlFor="from" className="mx-2">
-                  From
+                  Css
                 </label>
                 <input
-                  type="date"
+                  type="checkbox"
                   name="from"
                   id="from"
                   style={{ padding: "1rem" }}
                 />
                 <label htmlFor="to" className="mx-2">
-                  To
+                  Python
                 </label>
                 <input
-                  type="date"
+                  type="checkbox"
                   name="to"
                   id="to"
                   style={{ padding: "1rem", margin: "8px" }}
                 />
               </div>
 
-              {/* <div className="field1">
+              <div className="field1">
                 <div>
-                  <label htmlFor="course" className="font-medium">
-                    Award
+                  <label htmlFor="image" className="font-medium">
+                    Upload Image
                   </label>
                 </div>
                 <input
-                  type="text"
-                  name="degree"
-                  id="degree"
+                  type="file"
+                  name="image"
+                  id="image"
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="E.g bachelors"
                 />
-              </div> */}
+              </div>
               <div>
                 <button className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4">
                   Submit
@@ -95,7 +95,7 @@ const Projects = () => {
               <span>
                 <i class="bx bx-plus"></i>
               </span>
-              Add new experience
+              Add new project
             </button>
           </div>
         </div>
@@ -110,8 +110,8 @@ const Projects = () => {
           </Link>
         </div>
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
-          <Link to="/documents">
-            Next
+          <Link to="">
+            Finish
             <span>
               <i class="bx bx-right-arrow-alt"></i>
             </span>
