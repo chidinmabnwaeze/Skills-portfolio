@@ -1,41 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
-import Skills from "./Skills";
 
-const Education = () => {
+const Projects = () => {
   return (
-    <section className="bg-purple-100">
+    <section className="h-screen bg-purple-100 ">
       <div className="flex items-center justify-between">
         <div className="ml-16 slideLeft">
-          <img src={blob} className="h-[580px]" alt="" />
+          <img src={blob} className="w-[590px] object-cover" alt="" />
         </div>
 
         <div className="slideRight">
-          <div className="mr-24">
+          <div className=" mr-24">
             <div>
-              <h1 className="font-semibold text-2xl">Add Your Education</h1>
+              <h1 className="font-semibold text-2xl">Add your experience</h1>
+              <p>Tell us your experience</p>
             </div>
-
             <form action="" className="py-4">
               <div className="field1">
                 <div>
-                  <label htmlFor="schoolName" className="font-medium">
-                    Name of Institution
+                  <label htmlFor="position" className="font-medium">
+                    Position
                   </label>
                 </div>
                 <input
                   type="text"
-                  name="schoolName"
-                  id="schoolName"
+                  name="position"
+                  id="position"
                   style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter Institution name"
+                  placeholder="Enter your position"
+                />
+              </div>
+              <div className="field1">
+                <div>
+                  <label htmlFor="org" className="font-medium">
+                    Name of Organization
+                  </label>
+                </div>
+                <input
+                  type="text"
+                  name="org"
+                  id="org"
+                  style={{ padding: "1rem", width: "100%" }}
+                  placeholder="Enter organization name"
                 />
               </div>
               <div className="field1">
                 <div>
                   <label htmlFor="year" className="font-medium">
-                    Year of Graduation
+                    Duration
                   </label>
                 </div>
                 <label htmlFor="from" className="mx-2">
@@ -57,21 +70,8 @@ const Education = () => {
                   style={{ padding: "1rem", margin: "8px" }}
                 />
               </div>
-              <div className="field1">
-                <div>
-                  <label htmlFor="course" className="font-medium">
-                    Course of Study
-                  </label>
-                </div>
-                <input
-                  type="text"
-                  name="course"
-                  id="course"
-                  style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter course of study"
-                />
-              </div>
-              <div className="field1">
+
+              {/* <div className="field1">
                 <div>
                   <label htmlFor="course" className="font-medium">
                     Award
@@ -84,7 +84,7 @@ const Education = () => {
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="E.g bachelors"
                 />
-              </div>
+              </div> */}
               <div>
                 <button className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4">
                   Submit
@@ -95,14 +95,14 @@ const Education = () => {
               <span>
                 <i class="bx bx-plus"></i>
               </span>
-              Add new education
+              Add new experience
             </button>
           </div>
         </div>
       </div>
       <section className="flex justify-between">
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
-          <Link to="/skills">
+          <Link to="/education">
             <span>
               <i class="bx bx-left-arrow-alt"></i>
             </span>
@@ -110,7 +110,7 @@ const Education = () => {
           </Link>
         </div>
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
-          <Link to="/experience">
+          <Link to="/documents">
             Next
             <span>
               <i class="bx bx-right-arrow-alt"></i>
@@ -122,4 +122,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Projects;
