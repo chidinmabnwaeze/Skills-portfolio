@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
-import Skills from "./Skills";
 
 const Documents = () => {
   return (
@@ -17,24 +16,22 @@ const Documents = () => {
               <h1 className="font-semibold text-2xl">
                 Add your relevant documents
               </h1>
-              <p>Tell us your experience</p>
             </div>
             <form action="" className="py-4">
               <div className="field1">
                 <div>
-                  <label htmlFor="position" className="font-medium">
-                    Position
+                  <label htmlFor="file" className="font-medium">
+                    Upload CV/Resume
                   </label>
                 </div>
                 <input
-                  type="text"
-                  name="position"
-                  id="position"
+                  type="file"
+                  name="file"
+                  id="file"
                   style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter your position"
                 />
               </div>
-              <div className="field1">
+              {/* <div className="field1">
                 <div>
                   <label htmlFor="org" className="font-medium">
                     Name of Organization
@@ -72,7 +69,7 @@ const Documents = () => {
                   id="to"
                   style={{ padding: "1rem", margin: "8px" }}
                 />
-              </div>
+              </div> */}
 
               {/* <div className="field1">
                 <div>
@@ -94,12 +91,6 @@ const Documents = () => {
                 </button>
               </div>
             </form>
-            <button className="text-purple-700">
-              <span>
-                <i class="bx bx-plus"></i>
-              </span>
-              Add new experience
-            </button>
           </div>
         </div>
       </div>

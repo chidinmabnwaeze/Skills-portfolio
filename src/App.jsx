@@ -6,6 +6,8 @@ import Upload from "./admin/Upload";
 import Skills from "./admin/Skills";
 import Education from "./admin/Education";
 import ExperienceAdmin from "./admin/ExperienceAdmin";
+import Projects from "./admin/Projects";
+import Documents from "./admin/Documents";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<ExperienceAdmin />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </>
