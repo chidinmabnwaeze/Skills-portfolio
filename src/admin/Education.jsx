@@ -8,7 +8,7 @@ const Education = () => {
     <section className="bg-purple-100">
       <div className="flex items-center justify-between">
         <div className="ml-16 slideLeft">
-          <img src={blob} className="h-[580px]" alt="" />
+          <img src={blob} className="h-[600px]" alt="" />
         </div>
 
         <div className="slideRight">

@@ -7,7 +7,7 @@ const Projects = () => {
     <section className="h-screen bg-purple-100 ">
       <div className="flex items-center justify-between">
         <div className="ml-16 slideLeft">
-          <img src={blob} className="w-[590px] object-cover" alt="" />
+          <img src={blob} className="w-[600px] object-cover" alt="" />
         </div>
 
         <div className="slideRight">

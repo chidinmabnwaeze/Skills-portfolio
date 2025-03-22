@@ -2,12 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Upload from "./admin/Upload";
+import Profile from "./admin/Profile";
 import Skills from "./admin/Skills";
 import Education from "./admin/Education";
 import ExperienceAdmin from "./admin/ExperienceAdmin";
 import Projects from "./admin/Projects";
 import Documents from "./admin/Documents";
+import Login from "./admin/Login";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/upload" element={<Upload />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<ExperienceAdmin />} />

@@ -46,7 +46,7 @@ const Skills = () => {
       </div>
       <section className="flex justify-between absolute bottom-20 left-0 right-0">
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
-          <Link to="/upload">
+          <Link to="/profile">
             <span>
               <i class="bx bx-left-arrow-alt"></i>
             </span>

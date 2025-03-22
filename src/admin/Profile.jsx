@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
-import Skills from "./Skills";
 
-const Upload = () => {
+const Profile = () => {
   return (
-    <section className="h-screen bg-purple-100 overflow-hidden">
+    <section className="h-screen bg-purple-100 ">
       <div className="flex items-center justify-between">
         <div className="ml-16 slideLeft">
-          <img src={blob} className="h-3/4" alt="" />
+          <img src={blob} className="h-[600px]" alt="" />
         </div>
 
         <div className="slideRight">
@@ -29,18 +28,28 @@ const Upload = () => {
               </button>
             </div>
           </div>
-          <div className="font-medium text-xl mt-16 mx-20 flex justify-end hover:underline cursor-pointer ">
-            <Link to="/skills">
-              Next
-              <span>
-                <i class="bx bx-right-arrow-alt"></i>
-              </span>
-            </Link>
-          </div>
         </div>
       </div>
+      <section className="flex justify-between absolute bottom-20 left-0 right-0">
+        <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
+          <Link to="/login">
+            <span>
+              <i class="bx bx-left-arrow-alt"></i>
+            </span>
+            Back
+          </Link>
+        </div>
+        <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
+          <Link to="/skills">
+            Next
+            <span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </span>
+          </Link>
+        </div>
+      </section>
     </section>
   );
 };
 
-export default Upload;
+export default Profile;
