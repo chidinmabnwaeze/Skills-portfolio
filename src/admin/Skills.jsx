@@ -42,7 +42,7 @@ const Skills = () => {
               </button>
             </div>
           </div>
-          <div className="font-medium text-xl mt-16 mx-10 flex justify-end hover:underline cursor-pointer ">
+          <div className="font-medium text-xl mt-16 mx-20 flex justify-end hover:underline cursor-pointer ">
             <Link to="/education">
               Next
               <span>

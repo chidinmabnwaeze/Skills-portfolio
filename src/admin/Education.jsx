@@ -17,7 +17,7 @@ const Education = () => {
               <h1 className="font-semibold text-2xl">Add Your Education</h1>
             </div>
 
-            <form action="" className="mt-4 p-4">
+            <form action="" className="py-4">
               <div className="field1">
                 <div>
                   <label htmlFor="schoolName" className="font-medium">
@@ -98,7 +98,7 @@ const Education = () => {
               Add new education
             </button>
           </div>
-          <div className="font-medium text-xl mt-10 mx-10 flex justify-end hover:underline cursor-pointer ">
+          <div className="font-medium text-xl mt-6 mb-2 mx-20 flex justify-end hover:underline cursor-pointer ">
             <Link to="/experience">
               Next
               <span>
