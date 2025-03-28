@@ -13,7 +13,6 @@ const Login = () => {
               <option value="name">Chidinma</option>
               <option value="name">Everistus</option>
             </select>
-            <p>Chidinma</p>
           </div>
         </div>
       </section>
