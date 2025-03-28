@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./admin/Profile";
+import CreateAccount from "./admin/createAccount";
 import Skills from "./admin/Skills";
 import Education from "./admin/Education";
 import ExperienceAdmin from "./admin/ExperienceAdmin";
@@ -18,6 +19,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<CreateAccount />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
