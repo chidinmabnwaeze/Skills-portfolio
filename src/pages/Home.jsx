@@ -120,9 +120,9 @@ const Home = () => {
           {/* about section */}
           <section
             id="about"
-            className="about mx-48 mt-12 flex flex-col items-center justify-center js-scroll hideScroll"
+            className="about mx-48 flex flex-col items-center justify-center js-scroll hideScroll"
           >
-            <div className="title m-12">
+            <div className="title m-14 mt-20">
               <h1 className="text-3xl font-medium">About Me</h1>
               <p>Get to know me!</p>
             </div>
