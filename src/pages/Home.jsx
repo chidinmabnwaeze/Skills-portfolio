@@ -54,15 +54,15 @@ const Home = () => {
   };
 
   return (
-    <main className="">
+    <main className="bg-purple-200">
       <Header handleMenuClick={handleMenuClick} activeSection={activeSection} />
 
       {/* hideScroll class indicates styles for each element before they intersect and are revealed when scrolling */}
 
-      <section className="body mx-16 my-12">
+      <section className="body">
         <section
           id="home"
-          className="home h-lvh flex items-center justify-center js-scroll hideScroll bg-purple-200"
+          className="home h-lvh flex items-center justify-center js-scroll hideScroll"
         >
           <div className="introText relative">
             <span className="flex items-center">
@@ -84,7 +84,7 @@ const Home = () => {
                 Data Science <span>&#124;</span>
                 &nbsp; Artificial Intelligence <span>&#124;</span> <br />
                 Data Engineering <span>&#124; </span>
-                &nbsp; Software Engineering 
+                &nbsp; Software Engineering
               </p>
             </div>
             <div className="social-links flex items-center">
@@ -116,63 +116,68 @@ const Home = () => {
             alt="profile-pic"
           />
         </section>
-
-        {/* about section */}
-        <section
-          id="about"
-          className="about mx-32 flex flex-col items-center justify-center js-scroll hideScroll"
-        >
-          <div className="title m-12">
-            <h1 className="text-3xl font-medium">About Me</h1>
-            <p>Get to know me!</p>
-          </div>
-          <div className="aboutInfo flex justify-center">
-            {/* <img
+        <section className="bg-white">
+          {/* about section */}
+          <section
+            id="about"
+            className="about mx-32 flex flex-col items-center justify-center js-scroll hideScroll"
+          >
+            <div className="title m-12">
+              <h1 className="text-3xl font-medium">About Me</h1>
+              <p>Get to know me!</p>
+            </div>
+            <div className="aboutInfo flex justify-center">
+              {/* <img
               className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
               src={profile}
               alt="my picture"
             /> */}
 
-           <div className="info ml-10">
-              <article className="text-xl text-center text-gray-600 p-4">
-                A detail-oriented and experienced engineer with over 2 years of
-                experience in software design, development, and analysis,
-                complemented by my AI engineering skills. I have a proven track
-                record of managing analytic servers, optimizing database
-                systems, and providing technical support. Currently pursuing an
-                MSc in Artificial Intelligence, I seek an opportunity in a
-                tech-forward organization to apply my technical expertise to
-                drive innovation and enhance data-driven decision-making. I am
-                committed to delivering impactful solutions through a
-                combination of practical and academic experience.
-              </article>
-              <section className="figures flex justify-center items-center mt-16">
-                <div className="mr-10 text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
-                  <p className="text-gray-500">Years Experience</p>
-                </div>
-                <div className="mr-10 text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">
-                    10+
-                  </h1>
-                  <p className="text-gray-500">Projects</p>
-                </div>
-                <div className="text-center">
-                  <h1 className="text-2xl font-semibold text-purple-700">2+</h1>
-                  <p className="text-gray-500">Companies</p>
-                </div>
-              </section>
+              <div className="info ml-10">
+                <article className="text-xl text-center text-gray-600 p-4">
+                  A detail-oriented and experienced engineer with over 2 years
+                  of experience in software design, development, and analysis,
+                  complemented by my AI engineering skills. I have a proven
+                  track record of managing analytic servers, optimizing database
+                  systems, and providing technical support. Currently pursuing
+                  an MSc in Artificial Intelligence, I seek an opportunity in a
+                  tech-forward organization to apply my technical expertise to
+                  drive innovation and enhance data-driven decision-making. I am
+                  committed to delivering impactful solutions through a
+                  combination of practical and academic experience.
+                </article>
+                <section className="figures flex justify-center items-center mt-16">
+                  <div className="mr-10 text-center">
+                    <h1 className="text-2xl font-semibold text-purple-700">
+                      2+
+                    </h1>
+                    <p className="text-gray-500">Years Experience</p>
+                  </div>
+                  <div className="mr-10 text-center">
+                    <h1 className="text-2xl font-semibold text-purple-700">
+                      10+
+                    </h1>
+                    <p className="text-gray-500">Projects</p>
+                  </div>
+                  <div className="text-center">
+                    <h1 className="text-2xl font-semibold text-purple-700">
+                      2+
+                    </h1>
+                    <p className="text-gray-500">Companies</p>
+                  </div>
+                </section>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <Skills />
-        <Experience />
-        <Projects />
-        {/* <Services /> */}
-        {/* <References /> */}
-        <Contact />
-        <Footer />
+          <Skills />
+          <Experience />
+          <Projects />
+          {/* <Services /> */}
+          {/* <References /> */}
+          <Contact />
+          <Footer />
+        </section>
       </section>
     </main>
   );
