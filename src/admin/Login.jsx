@@ -5,16 +5,17 @@ import api from "../api";
 const Login = () => {
   const [users, setUsers] = useState([]);
 
-  //   useEffect(() => {
-  //     const fetchUsers = async () => {
-  //       try {
-  //         const response = await api.get("/user", apiKey);
-  //         setUsers(response.data);
-  //       } catch (error) {
-  //         console.error(`Error: ${error.message}`);
-  //       }
-  //     };
-  //   }, [apiKey]);
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await api.get("/user", apiKey);
+        setUsers(response.data);
+      } catch (error) {
+        console.error(`Error: ${error.message}`);
+      }
+    };
+    fetchUsers();
+  }, [apiKey]);
   return (
     <div className=" h-screen flex flex-col justify-center items-center bg-purple-100">
       <section>

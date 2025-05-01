@@ -79,7 +79,7 @@ const Projects = () => {
         <p>Here are some of my projects</p>
       </div>
 
-      <div className="scroll-container gap-4 p-4">
+      <div className="scroll-container grid grid-cols-2 gap-4 p-4">
         {myProjects.map((project) => (
           <section
             className="flex-shrink-0 w-full mb-20 bg-white shadow-2xl rounded-lg border p-4"
