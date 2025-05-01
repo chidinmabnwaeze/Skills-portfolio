@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import man from "../assets/images/dark_man-removebg-preview.png";
-import profile from "../assets/images/evan.jpg";
+import profile from "../assets/images/evan-github.jpg";
 import profilePic from "../assets/images/image.png";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
@@ -62,7 +62,7 @@ const Home = () => {
       <section className="body">
         <section
           id="home"
-          className="home h-lvh flex items-center justify-center js-scroll hideScroll"
+          className="home mx-16 my-12 h-lvh flex items-center justify-center js-scroll hideScroll"
         >
           <div className="introText relative">
             <span className="flex items-center">
@@ -120,20 +120,20 @@ const Home = () => {
           {/* about section */}
           <section
             id="about"
-            className="about mx-32 flex flex-col items-center justify-center js-scroll hideScroll"
+            className="about mx-48 mt-12 flex flex-col items-center justify-center js-scroll hideScroll"
           >
             <div className="title m-12">
               <h1 className="text-3xl font-medium">About Me</h1>
               <p>Get to know me!</p>
             </div>
             <div className="aboutInfo flex justify-center">
-              {/* <img
-              className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
-              src={profile}
-              alt="my picture"
-            /> */}
+              <img
+                className="rounded-2xl w-2/4 object-cover border-2 border-purple-700"
+                src={profile}
+                alt="my picture"
+              />
 
-              <div className="info ml-10">
+              <div className="info ml-20">
                 <article className="text-xl text-center text-gray-600 p-4">
                   A detail-oriented and experienced engineer with over 2 years
                   of experience in software design, development, and analysis,

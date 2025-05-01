@@ -158,7 +158,7 @@ const Skills = () => {
         <h1 className="text-3xl font-medium">Skills</h1>
         <p>My skills and proficiency</p>
       </div>
-      <main className="skill grid grid-cols-8 gap-20 m-auto mx-44">
+      <main className="skill grid grid-cols-8 gap-20 m-auto mx-48">
         {skills.map((skill, index) => (
           <section
             key={index}

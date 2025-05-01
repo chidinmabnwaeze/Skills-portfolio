@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <main
       id="contact"
-      className="contact m-32 bg-gray-100 p-3 rounded-xl js-scroll hideScroll"
+      className="contact m-36 bg-gray-100 p-3 rounded-xl js-scroll hideScroll"
     >
       <div className="title m-12 text-center">
         <h1 className="text-3xl font-medium">Contact</h1>
@@ -39,9 +39,7 @@ const Contact = () => {
             </span>
             <span>
               <h3 className="font-medium text-lg">Address</h3>
-              <p className="text-sm text-gray-400">
-                Nottingham, UK
-              </p>
+              <p className="text-sm text-gray-400">Nottingham, UK</p>
             </span>
           </div>
         </div>

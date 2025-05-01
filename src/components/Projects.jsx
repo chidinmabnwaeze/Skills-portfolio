@@ -71,7 +71,7 @@ const Projects = () => {
   return (
     <main
       id="projects"
-      className="project mx-24 mt-16 p-6 rounded-md js-scroll hideScroll"
+      className="project mx-32 mt-16 p-6 rounded-md js-scroll hideScroll"
     >
       {/* Title */}
       <div className="title m-8 text-center">
@@ -79,7 +79,7 @@ const Projects = () => {
         <p>Here are some of my projects</p>
       </div>
 
-      <div className="scroll-container grid lg:grid-cols-2 gap-4 p-4 sm:grid-cols-1">
+      <div className="scroll-container grid lg:grid-cols-2 gap-8 p-4 sm:grid-cols-1">
         {myProjects.map((project) => (
           <section
             className="flex-shrink-0 w-full mb-20 bg-white shadow-2xl rounded-lg border p-4"
