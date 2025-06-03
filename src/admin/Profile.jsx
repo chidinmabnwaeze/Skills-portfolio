@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
 
 const Profile = () => {
+  const [inputValue, setInputValue] = useState("");
+  const handleSubmit = () => {
+    e.preventDefault();
+    getItems();
+  };
+  const getItems = () => {
+    document.querySelector(".textArea").innerHTML === inputValue;
+    localStorage.setItem("userprofile", inputValue);
+    localStorage.getItem("userprofile");
+  };
+  console.log(inputValue);
   return (
     <section className="h-screen bg-purple-100 ">
       <div className="flex items-center justify-between">
@@ -20,10 +31,15 @@ const Profile = () => {
               name="profile"
               id=""
               height="4rem"
-              className="w-[400px] h-[200px] border"
+              className="textArea w-[400px] h-[200px] border p-4"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
             ></textarea>
             <div>
-              <button className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4">
+              <button
+                className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4"
+                onClick={handleSubmit}
+              >
                 Submit
               </button>
             </div>
