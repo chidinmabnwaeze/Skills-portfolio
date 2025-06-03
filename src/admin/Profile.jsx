@@ -5,11 +5,11 @@ import blob from "../assets/illustrations/profile illustration.png";
 const Profile = () => {
   const [inputValue, setInputValue] = useState("");
   const handleSubmit = () => {
-    e.preventDefault();
+    e.preventDefault(e);
     getItems();
   };
   const getItems = () => {
-    document.querySelector(".textArea").innerHTML === inputValue;
+    document.querySelector(".textArea").innerHTML = inputValue;
     localStorage.setItem("userprofile", inputValue);
     localStorage.getItem("userprofile");
   };
