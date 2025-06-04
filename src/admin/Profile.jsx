@@ -4,8 +4,8 @@ import blob from "../assets/illustrations/profile illustration.png";
 
 const Profile = () => {
   const [inputValue, setInputValue] = useState("");
-  const handleSubmit = () => {
-    e.preventDefault(e);
+  const handleSubmit = (e) => {
+    e.preventDefault();
     getItems();
   };
   const getItems = () => {
