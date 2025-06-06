@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 
-export default function Popup({ text, popupMessage }) {
-  const [textItem, setTextItem] = useState("");
-
-  //   const handlePopup = () => {
-  //     if (textItem && onclick === true) {
-  //       return "Profile has been saved successfully";
-  //     } else if (!textItem && onclick === true) {
-  //       return "Pls input a valid profile";
-  //     } else {
-  //       return "Profile could not be saved, an error occurred.";
-  //     }
-  //   };
-
+export default function Popup({ popupMessage }) {
   return (
-    <div className="popup border ">
-      <div>
-        <i></i>
-        <p>{popupMessage}</p>
+    <div className="popup fixed top-6 w-1/4 rounded-xl border border-purple-700 bg-white p-3 shadow ">
+      <div className="flex items-center">
+        <i class="bx  bx-check-circle text-2xl text-purple-700 mr-3"></i>
+        <p className="text-purple-700">{popupMessage}</p>
       </div>
     </div>
   );

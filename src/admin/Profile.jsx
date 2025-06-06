@@ -19,6 +19,10 @@ const Profile = () => {
     }
     setShowPopup(true);
     console.log(inputValue);
+
+    // setTimeout(() => {
+    //   setShowPopup(false);
+    // }, 3000);
   };
 
   return (
@@ -29,6 +33,7 @@ const Profile = () => {
         </div>
 
         <div className="slideRight">
+          {showPopup && <Popup popupMessage={popupMessage} />}
           <div className="my-auto mr-24">
             <div>
               <h1 className="font-semibold text-2xl">Add a profile</h1>
@@ -54,7 +59,6 @@ const Profile = () => {
         </div>
       </div>
 
-      {popupMessage && <Popup popupMessage={popupMessage} />}
       <section className="flex justify-between absolute bottom-20 left-0 right-0">
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
           <Link to="/login">
