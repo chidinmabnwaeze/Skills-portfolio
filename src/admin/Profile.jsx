@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
+import Popup from "../components/Popup";
 
 const Profile = () => {
   const [inputValue, setInputValue] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    getItems();
+
+    if (inputValue.trim()) {
+      localStorage.setItem("userProfile", inputValue);
+      setPopupMessage(` profileName has been saved successfully`);
+    } else {
+      setPopupMessage("Please input a valid profile");
+    }
+    setShowPopup(true);
+    console.log(inputValue);
   };
-  const getItems = () => {
-    document.querySelector(".textArea").innerHTML = inputValue;
-    localStorage.setItem("userprofile", inputValue);
-    localStorage.getItem("userprofile");
-  };
-  console.log(inputValue);
+
   return (
     <section className="h-screen bg-purple-100 ">
       <div className="flex items-center justify-between">
@@ -46,6 +53,8 @@ const Profile = () => {
           </div>
         </div>
       </div>
+
+      {popupMessage && <Popup popupMessage={popupMessage} />}
       <section className="flex justify-between absolute bottom-20 left-0 right-0">
         <div className="font-medium text-xl mx-20 flex justify-end hover:underline cursor-pointer ">
           <Link to="/login">
