@@ -20,9 +20,9 @@ const Profile = () => {
     setShowPopup(true);
     console.log(inputValue);
 
-    // setTimeout(() => {
-    //   setShowPopup(false);
-    // }, 3000);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
   };
 
   return (
