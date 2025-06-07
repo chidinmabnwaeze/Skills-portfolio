@@ -4,13 +4,14 @@ import blob from "../assets/illustrations/profile illustration.png";
 
 const Skills = () => {
   const [addSkill, setAddSkill] = useState([]);
-  const handleAddSkill = () => {
-    setAddSkill([...addSkill, { skill: "" }]);
-  };
-  const handleServiceChange = () => {
-    e.target.value();
-  };
+  const [skill, setSkill] = useState("");
 
+  const handleAddSkill = () => {
+    setAddSkill([...addSkill, skill.trim()]);
+    setSkill("");
+    localStorage.setItem("skills", addSkill);
+  };
+  console.log(addSkill);
   return (
     <section className="h-screen relative bg-purple-100 ">
       <div className="flex items-center justify-between">
@@ -21,25 +22,35 @@ const Skills = () => {
         <div className="slideRight w-1/3">
           <div className="my-auto mr-24">
             <div>
-              <h1 className="font-semibold text-2xl">Add your skills</h1>
+              <h1 className="font-semibold text-2xl mb-6">Add your skills</h1>
               {addSkill.map((add, index) => (
-                <button key={index}>{add.skill && add.skill}</button>
+                <button
+                  className="border focus-visible:border-purple-700  border-purple-700 w-2/4 rounded-xl p-3 bg-white"
+                  key={index}
+                >
+                  {add}
+                  <button>
+                    <i class="bx  bx-trash-x text-purple-900"></i>
+                  </button>
+                </button>
               ))}
             </div>
             <input
-              name="profile"
+              name="skill"
               id=""
-              className="p-3"
-              // value={add.skill}
-              onChange={(e) => handleServiceChange(e)}
+              className="p-3 w-full my-5"
+              placeholder="e.g Javascript"
+              value={skill}
+              onChange={(e) => setSkill(e.target.value)}
             ></input>
             <div>
               <button
-                className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4"
+                className="rounded-lg bg-purple-700 text-white m-3 p-3 w-2/4"
                 onClick={handleAddSkill}
               >
-                Add
+                Add Skill
               </button>
+              <i class="bx  bx-trash-x"></i>
             </div>
           </div>
         </div>
