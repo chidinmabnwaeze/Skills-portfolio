@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
 
@@ -6,10 +6,20 @@ const Skills = () => {
   const [addSkill, setAddSkill] = useState([]);
   const [skill, setSkill] = useState("");
 
+  useEffect(() => {
+    const savedSkills = () => {
+      JSON.parse(localStorage.getItem("skills") || []);
+      setAddSkill(savedSkills);
+    };
+  }, []);
   const handleAddSkill = () => {
-    setAddSkill([...addSkill, skill.trim()]);
-    setSkill("");
-    localStorage.setItem("skills", addSkill);
+    if (skill.trim()) {
+      setAddSkill([...addSkill, skill.trim()]);
+      setSkill("");
+      localStorage.setItem("skills", JSON.stringify(addSkill));
+    } else {
+      ("Enter a valid skill");
+    }
   };
   console.log(addSkill);
   return (

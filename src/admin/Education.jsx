@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
 import Skills from "./Skills";
 
 const Education = () => {
+  const [data, setData] = useState([]);
+
+  const formData = () => {
+    setData([...data, formData]);
+    setData(
+      {
+        name: formData.value,
+        date: formData.value,
+      },
+      localStorage.setItem("formData", JSON.stringify(formData))
+    );
+  };
   return (
     <section className="bg-purple-100">
       <div className="flex items-center justify-between">
@@ -28,6 +40,8 @@ const Education = () => {
                   type="text"
                   name="schoolName"
                   id="schoolName"
+                  value={formData.name}
+                  onChange={(e) => setData(e.target.value)}
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="Enter Institution name"
                 />
@@ -77,6 +91,7 @@ const Education = () => {
                     Award
                   </label>
                 </div>
+
                 <input
                   type="text"
                   name="degree"
