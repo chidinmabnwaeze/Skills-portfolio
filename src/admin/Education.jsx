@@ -1,21 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import blob from "../assets/illustrations/profile illustration.png";
 import Skills from "./Skills";
 
 const Education = () => {
-  const [data, setData] = useState([]);
+  const [education, setEducation] = useState([]);
+  const [formData, setFormData] = useState({
+    institution: "",
+    from: "",
+    to: "",
+    course: "",
+    degree: "",
+  });
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem("education")) || [];
+    setEducation(savedData);
+  }, []);
 
-  const formData = () => {
-    setData([...data, formData]);
-    setData(
-      {
-        name: formData.value,
-        date: formData.value,
-      },
-      localStorage.setItem("formData", JSON.stringify(formData))
-    );
+  useEffect(() => {
+    localStorage.setItem("education", JSON.stringify(education));
+  }, [education]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setEducation((prev) => [...prev, formData]);
+    setFormData({
+      institution: "",
+      from: "",
+      to: "",
+      course: "",
+      degree: "",
+    });
+    localStorage.setItem("formdata", JSON.stringify(formData));
+  };
+
   return (
     <section className="bg-purple-100">
       <div className="flex items-center justify-between">
@@ -29,7 +53,7 @@ const Education = () => {
               <h1 className="font-semibold text-2xl">Add Your Education</h1>
             </div>
 
-            <form action="" className="py-4">
+            <form onSubmit={handleSubmit} className="py-4">
               <div className="field1">
                 <div>
                   <label htmlFor="schoolName" className="font-medium">
@@ -38,10 +62,10 @@ const Education = () => {
                 </div>
                 <input
                   type="text"
-                  name="schoolName"
+                  name="institution"
                   id="schoolName"
-                  value={formData.name}
-                  onChange={(e) => setData(e.target.value)}
+                  value={formData.institution}
+                  onChange={handleChange}
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="Enter Institution name"
                 />
@@ -60,6 +84,8 @@ const Education = () => {
                   name="from"
                   id="from"
                   style={{ padding: "1rem" }}
+                  value={formData.from}
+                  onChange={handleChange}
                 />
                 <label htmlFor="to" className="mx-2">
                   To
@@ -69,6 +95,8 @@ const Education = () => {
                   name="to"
                   id="to"
                   style={{ padding: "1rem", margin: "8px" }}
+                  value={formData.to}
+                  onChange={handleChange}
                 />
               </div>
               <div className="field1">
@@ -83,6 +111,8 @@ const Education = () => {
                   id="course"
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="Enter course of study"
+                  value={formData.course}
+                  onChange={handleChange}
                 />
               </div>
               <div className="field1">
@@ -98,6 +128,8 @@ const Education = () => {
                   id="degree"
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="E.g bachelors"
+                  value={formData.award}
+                  onChange={handleChange}
                 />
               </div>
               <div>
