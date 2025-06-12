@@ -12,6 +12,8 @@ const Education = () => {
     course: "",
     degree: "",
   });
+  const [multipleForm, setMultipleForm] = useState([]);
+
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("education")) || [];
     setEducation(savedData);
@@ -38,6 +40,18 @@ const Education = () => {
       degree: "",
     });
     localStorage.setItem("formdata", JSON.stringify(formData));
+  };
+
+  const addEducation = () => {
+    const newForm = [...education, formData];
+    setEducation(newForm);
+  };
+
+  const addEdu = () => {
+    for (let i = 0; i < education.length; i++) {
+      education[i];
+      education.push(i);
+    }
   };
 
   return (
@@ -128,7 +142,7 @@ const Education = () => {
                   id="degree"
                   style={{ padding: "1rem", width: "100%" }}
                   placeholder="E.g bachelors"
-                  value={formData.award}
+                  value={formData.degree}
                   onChange={handleChange}
                 />
               </div>
@@ -138,12 +152,42 @@ const Education = () => {
                 </button>
               </div>
             </form>
-            <button className="text-purple-700">
-              <span>
+
+            <div>
+              <button onClick={addEdu}>
                 <i class="bx bx-plus"></i>
-              </span>
-              Add new education
-            </button>
+                Add Education
+              </button>
+            </div>
+
+            {/* {education.length > 1 && (
+              <div>
+                {education.map((form, index) => (
+                  <button
+                    key={index}
+                    className="text-purple-700"
+                    onClick={addEducation}
+                  >
+                    <span>
+                      <i class="bx bx-plus"></i>
+                    </span>
+                    Add new education
+                  </button>
+                ))}
+              </div>
+            )} */}
+            {/* {education.length > 0 && (
+              <div className="mt-4 space-y-2">
+                <h2 className="font-semibold text-lg">Education List:</h2>
+                <ul className="list-disc pl-5 text-gray-800">
+                  {education.map((edu, index) => (
+                    <li key={index}>
+                      {edu.schoolName} - {edu.course} ({edu.from} to {edu.to})
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )} */}
           </div>
         </div>
       </div>
