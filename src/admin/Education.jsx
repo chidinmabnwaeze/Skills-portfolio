@@ -4,54 +4,88 @@ import blob from "../assets/illustrations/profile illustration.png";
 import Skills from "./Skills";
 
 const Education = () => {
-  const [education, setEducation] = useState([]);
-  const [formData, setFormData] = useState({
-    institution: "",
-    from: "",
-    to: "",
-    course: "",
-    degree: "",
-  });
-  const [multipleForm, setMultipleForm] = useState([]);
+  const [education, setEducation] = useState([
+    {
+      institution: "",
+      from: "",
+      to: "",
+      course: "",
+      degree: "",
+    },
+  ]);
+  // const [formData, setFormData] = useState({
+  //   institution: "",
+  //   from: "",
+  //   to: "",
+  //   course: "",
+  //   degree: "",
+  // });
+  // const [multipleForm, setMultipleForm] = useState([]);
 
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem("education")) || [];
-    setEducation(savedData);
+    if (savedData.length > 0) {
+      setEducation(savedData);
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem("education", JSON.stringify(education));
   }, [education]);
 
-  const handleChange = (e) => {
+  const handleChange = (index, e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const updatedData = [...education];
+    updatedData[index][name] = value;
+    setEducation(updatedData);
+    // setFormData((prev) => ({ ...prev, education}));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setEducation((prev) => [...prev, formData]);
-    setFormData({
-      institution: "",
-      from: "",
-      to: "",
-      course: "",
-      degree: "",
-    });
-    localStorage.setItem("formdata", JSON.stringify(formData));
+    // setEducation((prev) => [...prev, {
+    //   institution: "",
+    //   from: "",
+    //   to: "",
+    //   course: "",
+    //   degree: "",
+    // }]);
+    //
+    //  // setFormData({
+    //   institution: "",
+    //   from: "",
+    //   to: "",
+    //   course: "",
+    //   degree: "",
+    // });
+
+    localStorage.setItem("education", JSON.stringify(education));
+    alert("form Submitted");
   };
 
-  const addEducation = () => {
-    const newForm = [...education, formData];
-    setEducation(newForm);
+  // const addEducation = () => {
+  //   const newForm = [...education, formData];
+  //   setEducation(newForm);
+  // };
+
+  const addEdu = (e) => {
+    e.preventDefault();
+    setEducation((prev) => [
+      ...prev,
+      {
+        institution: "",
+        from: "",
+        to: "",
+        course: "",
+        degree: "",
+      },
+    ]);
   };
 
-  const addEdu = () => {
-    for (let i = 0; i < education.length; i++) {
-      education[i];
-      education.push(i);
-    }
+  const deleteForm = (index) => {
+    const forms = education.filter((_, deleted) => deleted !== index);
+    setEducation(forms);
   };
 
   return (
@@ -60,7 +94,6 @@ const Education = () => {
         <div className="ml-16 slideLeft">
           <img src={blob} className="h-[600px]" alt="" />
         </div>
-
         <div className="slideRight">
           <div className="mr-24">
             <div>
@@ -68,86 +101,94 @@ const Education = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="py-4">
-              <div className="field1">
-                <div>
-                  <label htmlFor="schoolName" className="font-medium">
-                    Name of Institution
-                  </label>
-                </div>
-                <input
-                  type="text"
-                  name="institution"
-                  id="schoolName"
-                  value={formData.institution}
-                  onChange={handleChange}
-                  style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter Institution name"
-                />
-              </div>
-              <div className="field1">
-                <div>
-                  <label htmlFor="year" className="font-medium">
-                    Year of Graduation
-                  </label>
-                </div>
-                <label htmlFor="from" className="mx-2">
-                  From
-                </label>
-                <input
-                  type="date"
-                  name="from"
-                  id="from"
-                  style={{ padding: "1rem" }}
-                  value={formData.from}
-                  onChange={handleChange}
-                />
-                <label htmlFor="to" className="mx-2">
-                  To
-                </label>
-                <input
-                  type="date"
-                  name="to"
-                  id="to"
-                  style={{ padding: "1rem", margin: "8px" }}
-                  value={formData.to}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="field1">
-                <div>
-                  <label htmlFor="course" className="font-medium">
-                    Course of Study
-                  </label>
-                </div>
-                <input
-                  type="text"
-                  name="course"
-                  id="course"
-                  style={{ padding: "1rem", width: "100%" }}
-                  placeholder="Enter course of study"
-                  value={formData.course}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="field1">
-                <div>
-                  <label htmlFor="course" className="font-medium">
-                    Award
-                  </label>
-                </div>
+              {education.map((form, index) => (
+                <div key={index} className="mb-6 border-b pb-4">
+                  <div className="field1">
+                    <div>
+                      <label htmlFor="schoolName" className="font-medium">
+                        Name of Institution
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      name="institution"
+                      id="schoolName"
+                      value={form.institution}
+                      onChange={(e) => handleChange(index, e)}
+                      style={{ padding: "1rem", width: "100%" }}
+                      placeholder="Enter Institution name"
+                    />
+                  </div>
+                  <div className="field1">
+                    <div>
+                      <label htmlFor="year" className="font-medium">
+                        Year of Graduation
+                      </label>
+                    </div>
+                    <label htmlFor="from" className="mx-2">
+                      From
+                    </label>
+                    <input
+                      type="date"
+                      name="from"
+                      id="from"
+                      style={{ padding: "1rem" }}
+                      value={form.from}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                    <label htmlFor="to" className="mx-2">
+                      To
+                    </label>
+                    <input
+                      type="date"
+                      name="to"
+                      id="to"
+                      style={{ padding: "1rem", margin: "8px" }}
+                      value={form.to}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                  </div>
+                  <div className="field1">
+                    <div>
+                      <label htmlFor="course" className="font-medium">
+                        Course of Study
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      name="course"
+                      id="course"
+                      style={{ padding: "1rem", width: "100%" }}
+                      placeholder="Enter course of study"
+                      value={form.course}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                  </div>
+                  <div className="field1">
+                    <div>
+                      <label htmlFor="course" className="font-medium">
+                        Award
+                      </label>
+                    </div>
 
-                <input
-                  type="text"
-                  name="degree"
-                  id="degree"
-                  style={{ padding: "1rem", width: "100%" }}
-                  placeholder="E.g bachelors"
-                  value={formData.degree}
-                  onChange={handleChange}
-                />
-              </div>
+                    <input
+                      type="text"
+                      name="degree"
+                      id="degree"
+                      style={{ padding: "1rem", width: "100%" }}
+                      placeholder="E.g bachelors"
+                      value={form.degree}
+                      onChange={(e) => handleChange(index, e)}
+                    />
+                  </div>
+                  <button onClick={() => deleteForm(index)}>Delete</button>
+                </div>
+              ))}
               <div>
-                <button className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4">
+                <button
+                  className="rounded-lg bg-purple-700 text-white m-3 p-3 w-1/4"
+                  onClick={handleSubmit}
+                >
                   Submit
                 </button>
               </div>
